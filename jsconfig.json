@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"]
+      //"@/*": ["https://oblum1.testingscrew.com/v1/*"]
+    }
+  }
+}
