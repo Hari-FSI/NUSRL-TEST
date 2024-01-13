@@ -1,0 +1,36 @@
+{
+    "it": [
+        {
+            "id": "1",
+            "image": "/images/faculty/s-mondal.webp",
+            "name": "Shri Sumitra Mandal",
+            "designation": "Office Assistant (System Administrator)"
+        },
+        {
+            "id": "2",
+            "image": "/images/faculty/Ravi.webp",
+            "name": "Shri Ravi Kumar Pandey",
+            "designation": "Office Assistant (Asstt. System Administrator)"
+        }
+    ],
+    "administrative": [
+        {
+            "id": "1",
+            "image": "/images/faculty/pawan.webp",
+            "name": "Shri Pawan Kumar",
+            "designation": "Office Assistant (Library In-charge)"
+        },
+        {
+            "id": "2",
+            "image": "/images/faculty/saket.webp",
+            "name": "Shri Saket Kumar",
+            "designation": "Sr. Library Assistant"
+        },
+        {
+            "id": "3",
+            "image": "/images/faculty/manjay.webp",
+            "name": "Shri Manjay Munda",
+            "designation": "Peon (Library)"
+        }
+    ]
+}

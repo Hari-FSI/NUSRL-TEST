@@ -38,6 +38,8 @@ module.exports = withPlugins([
 
 module.exports = {
   useFileSystemPublicRoutes: false,
+
+  target: 'serverless', // or 'server' if you are using a custom server
 }
 
 const nextConfig = {

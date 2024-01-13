@@ -1,0 +1,34 @@
+{
+    "CurrentOfficeBearers": [
+        {
+            "id": "1",
+            "title": "Chinmoy Roy, President",
+            "email": "Chinmoyroy@outlook.com ",
+            "phone": "+918802831601"
+        },
+        {
+            "id": "2",
+            "title": "Abhijeet Kumar, Executive Member",
+            "email": "abhijeetkumar.nusrl@gmail.com",
+            "phone": "+918084878387"
+        }
+    ],
+    "FacultyInCharge": [
+        {
+            "id": "1",
+            "title": "Dr. Hiral Mehta Kumar",
+            "desination": "Assistant Professor of Law, NUSRL Ranchi",
+            "email": "hiral.mehta@nusrlranchi.ac.in",
+            "phone": "+918051176055"
+        }
+    ],
+    "BankAccountDetails": [
+        {
+            "id": "1",
+            "account": "393601000618",
+            "name": "NATIONAL UNIVERSITY OF STUDY AND RESEARCH IN LAW ALUMNI ASSOCIATION",
+            "branch": "ICICI Bank, Booty More",
+            "ifsc": "ICIC0003936"
+        }
+    ]
+}

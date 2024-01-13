@@ -1,4 +1,3 @@
-"use client";
 import 'bootstrap/dist/css/bootstrap.css';
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -9,10 +8,6 @@ import '../styles/globals.css';
 import Head from 'next/head'
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
-
-import dynamic from 'next/dynamic';  
-import Script from 'next/script';
-import Image from 'next/image';
 Fancybox.bind('[data-fancybox]', {
   //
 });

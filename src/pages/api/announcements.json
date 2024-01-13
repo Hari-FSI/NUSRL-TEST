@@ -1,0 +1,46 @@
+{
+    "announcements": [
+        {
+            "id": 1,
+            "date": "12-1-2024",
+            "title": "Tender Notification (Newspaper)",
+            "link": "/pdf/Tender-Notification-Paper.pdf",
+            "target": "_blank"
+        },
+        {
+            "id": 2,
+            "date": "4-1-2024",
+            "title": "Tender Notification (Newspaper)",
+            "link": "/announcements/recruitment_notification_for_non_teaching_positions",
+            "target": "_self"
+        },
+        {
+            "id": 3,
+            "date": "13-12-2023",
+            "title": "Admission Notification for PhD",
+            "link": "/pdf/Admission-Notification-for-PhD.pdf",
+            "target": "_blank"
+        },
+        {
+            "id": 4,
+            "date": "13-12-2023",
+            "title": "List of Documents PhD Admission",
+            "link": "/pdf/Hostel-Notice.pdf",
+            "target": "_blank"
+        },
+        {
+            "id": 5,
+            "date": "06-12-2023",
+            "title": "NOTICE - Regarding Hostel",
+            "link": "/pdf/Hostel-Notice.pdf",
+            "target": "_blank"
+        },
+        {
+            "id": 6,
+            "date": "25-11-2023",
+            "title": "Ph.D. Admission 2023 - Final Result",
+            "link": "/pdf/PhDresult.pdf",
+            "target": "_blank"
+        }
+    ]
+}

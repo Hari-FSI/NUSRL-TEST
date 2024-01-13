@@ -1,0 +1,46 @@
+{
+    "eventslarge": [
+        {
+            "id": 1,
+            "date": "21-12-2023",
+            "title": "Online Course on Madhya Pradesh Judicial Services Examination- 2024",
+            "disc": "The National University of Study and Research in Law, Ranchi, is an institution dedicated to the cause of imparting legal education,",
+            "image": "/images/events/e1.webp",
+            "link": "/pdf/MPJudicialServicesPreparation.pdf",
+            "target": "_blank",
+            "class": "large_events"
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "date": "29-11-2023",
+            "title": "Kurukshetra 2023, the Flagship Parliamentary Debate Competition",
+            "disc": "The Literary Society at the National University of Study and Research in Law",
+            "image": "/images/events/e2.webp",
+            "link": "/pdf/Brochure-Kurukshetra-1-1.pdf",
+            "target": "_blank",
+            "class": "small_events"
+        },
+        {
+            "id": 2,
+            "date": "06-11-2023",
+            "title": "One-month Online Crash Course on Jharkhand Judicial Services Preliminary Examination- 2023",
+            "disc": "The National University of Study and Research in Law, Ranchi,",
+            "image": "/images/events/e3.webp",
+            "link": "/pdf/JudiciaryCourseBrochure.pdf",
+            "target": "_blank",
+            "class": "small_events"
+        },
+        {
+            "id": 3,
+            "date": "04-11-2023",
+            "title": "4th EDITION OF ONLINE SHORT-TERM COURSE ON LEGAL AID AND ALLIED LAWS",
+            "disc": "The National University of Study and Research in Law, Ranchi, ",
+            "image": "/images/events/e4.webp",
+            "link": "/pdf/4thEditionOnlineLegalAidCourse.pdf",
+            "target": "_blank",
+            "class": "small_events"
+        }
+    ]
+}
