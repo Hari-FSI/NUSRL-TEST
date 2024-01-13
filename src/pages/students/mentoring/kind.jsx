@@ -5,10 +5,10 @@ import Link from "next/link";
 const DynamicknowmoreBlock = dynamic(() => import('../../../components/Home/knowmoreBlock'), {
   suspense: true,
 })
-const joy = () => {
+const kind = () => {
   const herobanner = [
     { id:1, 
-      title: "Knid", 
+      title: "Kind", 
       image: "/images/inner-banner.webp"
     }
   ];
@@ -39,7 +39,7 @@ const joy = () => {
 
 <p>Name of the Faculty&nbsp; : <strong>  Mr. Shubham Srivastava</strong></p>
 
-<p>Name of the Team &nbsp; :&nbsp;<strong>&nbsp; Knid</strong></p>
+<p>Name of the Team &nbsp; :&nbsp;<strong>&nbsp; Kind</strong></p>
 
 
 </div>
@@ -54,4 +54,4 @@ const joy = () => {
   )
 }
 
-export default knid
+export default kind
