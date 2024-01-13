@@ -60,7 +60,7 @@ const examinations_schedule = () => {
         <div className="card" key={card.id}>
           <h5>{card.title}</h5>
           <div>
-          <Link className="btn-blue-brd" href={card.link}  target={linkItem.target}>
+          <Link className="btn-blue-brd" href={card.link}  target={card.target}>
           <span className="material-symbols-outlined">visibility</span>
             View
           </Link>
