@@ -6,7 +6,7 @@ import Image from 'next/image'
 const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmoreBlock'), {
   suspense: true,
 })
-const internship_placement_committee = () => {
+const recruitment_co_ordination_commitee = () => {
   const herobanner = [
     { id:1, 
       title: "Internship & Placement Committee", 
