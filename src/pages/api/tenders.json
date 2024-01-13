@@ -1,0 +1,42 @@
+{
+    "tenders": [
+        {
+            "id": "1",
+            "date": "03-02-2024",
+            "notices": [
+                {
+                    "title": "Tender Documents",
+                    "pdf": "",
+                    "target": "_self"
+                }
+            ],
+            "documents": [
+                {
+                    "title": "Mess Services",
+                    "pdf": "pdf/Mess-Tender-2024.pdf",
+                    "target": "_blank"
+                },
+                {
+                    "title": "Canteen Services",
+                    "pdf": "pdf/Cafeteria-Tender-Notice.pdf",
+                    "target": "_blank"
+                },
+                {
+                    "title": "Empanelment of Travel Agent(Document will be uploaded soon)",
+                    "pdf": "javascipt:void(0);",
+                    "target": "_self"
+                },
+                {
+                    "title": "Rental Taxi Services",
+                    "pdf": "pdf/Tender-for-taxi-services.pdf",
+                    "target": "_blank"
+                },
+                {
+                    "title": "Shifting of 10 KVA UPS",
+                    "pdf": "pdf/Tender-UPS-Shifting.pdf",
+                    "target": "_blank"
+                }
+            ]
+        }
+    ]
+}

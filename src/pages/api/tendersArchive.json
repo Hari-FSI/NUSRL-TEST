@@ -1,0 +1,45 @@
+{
+    "archives": [
+        {
+            "id": "1",
+            "date": "09-12-23",
+            "notices": [
+                {
+                    "title": "CORRIGENDUM II - Supply, Installation, Testing & Commissioning of Internet Leased Line",
+                    "pdf": "",
+                    "target": "_self"
+                }
+            ],
+            "documents": [
+                {
+                    "title": "Corrigendum II ILL Notice",
+                    "pdf": "pdf/Corrigendum-II-ILL.pdf",
+                    "target": "_blank"
+                },
+                {
+                    "title": "TENDER DOCUMENT ILL",
+                    "pdf": "pdf/LEASED-LINE-TENTER-09-12-23.pdf",
+                    "target": "_blank"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "date": "09-12-23",
+            "notices": [
+                {
+                    "title": "Annual Rate Contract for Taxi Service",
+                    "pdf": "",
+                    "target": "_self"
+                }
+            ],
+            "documents": [
+                {
+                    "title": "Tender Document",
+                    "pdf": "pdf/Tender-for-taxi-services1.pdf",
+                    "target": "_blank"
+                }
+            ]
+        }
+    ]
+}

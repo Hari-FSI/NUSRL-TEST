@@ -1,16 +1,22 @@
-import Header from "./HeaderMain/HeaderMain";
-import Footer from "./FooterMain/FooterMain";
-import axios from "axios";
-import { useState, useEffect } from "react";
-import Image from 'next/image';
+import React,{ useState, useEffect} from "react";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+
+const DynamicHeaderMain = dynamic(() => import('./HeaderMain/HeaderMain'), {
+  suspense: true,
+})
+
+const DynamicFooterMain = dynamic(() => import('./FooterMain/FooterMain'), {
+  suspense: true,
+})
+
 export default function Layout({ children }) {
   return (
     <>
-      {" "}
       <div className="conatiner-box">
-        <Header/>
+        <Suspense fallback={<div>Loading...</div>}><DynamicHeaderMain /></Suspense>
         {children}
-        <Footer/>
+        <Suspense fallback={<div>Loading...</div>}><DynamicFooterMain /></Suspense>
       </div>
     </>
   );
