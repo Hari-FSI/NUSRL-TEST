@@ -263,7 +263,7 @@
     top:0;
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
   }
-  .logo_section, .logo_section:hover {
+  .logo_section, .logo_section:hover, .logo_section:focus  {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -388,27 +388,32 @@
    /* display: none; */
    margin-left: 48px;
   }
-  nav .main_nav li a,
-  nav .main_nav li{
-    font:var(--font-h3);
-  }
 
-  nav li a:focus{color: #fff;}
-  nav .main_nav li .dropdown-menu > li > a,
-  nav li a{
+  .menu .menu-link,
+  .menu .menu-link a {
+    font: var(--font-h3);
     color: #aaa;
-    padding: 0px 0px;
+    padding: 5px 0;
+    display: flex;
+}
+.menu .menu-link a.show.nav-link,
+  .menu .menu-link:hover,
+  .menu .menu-link:focus{color: #fff;}
+
+
+  .menu .dropdown-menu a{
+    color: #aaa;
+    padding:5px 0;
     display: flex;
     font:var(--font-h6)
   }
-  nav .main_nav li.open a,
-  nav .main_nav li.open a:focus,
-  nav .main_nav li .dropdown-menu > li > a:hover,
-  nav li a:hover{
+
+  .menu .dropdown-menu a:hover,
+  .menu .dropdown-menu a:focus{
     color: #fff;     background: transparent;
   }
 
-  nav .main_nav li .dropdown-menu {
+  .menu .dropdown-menu {
     top: 0px;
     left: 40%;
     padding: 0px 0;
@@ -417,8 +422,14 @@
     border: none;
     border-radius: 0px;
     box-shadow: none;
+    width: max-content;
 }
-
+.menu .dropdown-menu .dropdown-menu {
+  top: 0px;
+  left: 100%;
+  padding: 0 0 0 30%;
+  width: 430px;
+}
 .dropup, .dropdown {
   position: unset;
 }
@@ -788,7 +799,7 @@
     padding: 20px 0px;
   }
   .course {
-    padding: 36px;
+    padding: 15px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -1447,4 +1458,25 @@
     .faculty img{
       width: 95%;
     }
+
+    .menu .menu-link, .menu .menu-link a {
+      display: block;
+  }
+    .menu .dropdown-menu {
+      left: 0;
+      width: 100%;
+      position: relative;
+  }
+
+  .menu .dropdown-menu .dropdown-menu {
+    top: 0px;
+    left: 0;
+    padding: 0 0 0 5%;
+    width: 100%;
+}
+
+nav .menu_close {
+  margin: 0 0 0 15px;
+}
+
   }

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import $ from 'jquery';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 const HeaderMain = () => {
 
@@ -104,8 +104,10 @@ const HeaderMain = () => {
     </div>
   </header>
   {isNavOpen && (
-  <nav>
-  <div className="close_btn">
+
+<Navbar expand="lg">
+
+<div className="close_btn">
     <Link href="/" className="logo_section">
       <Image
         className='logo_img'
@@ -121,409 +123,340 @@ const HeaderMain = () => {
     </Link>
     <button className="menu_close" onClick={closeNav}><span className="material-symbols-outlined">close</span></button>
   </div>
-  <div className="links_list container">
+  <div class="links_list container">
+<Navbar.Collapse className='links_list '>
+
+  <Nav className="menu menu-bar main_nav container" >
+
+    <NavDropdown
+    className={ pathName == 'about' ? 'menu-link active' : 'menu-link' } 
+    title="About Us" 
+    id="basic-nav-dropdown"
+    >
+    <Link href="/about/vision" onClick={closeNav}>
+    Vision
+    </Link>
+    <Link href="/pdf/organisational-chart.pdf" target='_blank' onClick={closeNav}>
+    Organisational Chart
+    </Link>
+    <Link href="/about/nusrl_act_2010" onClick={closeNav}>
+    NUSRL Act 2010
+    </Link>
+    <NavDropdown 
+    className={ pathName == 'about/rules_of_examination' ? 'menu-link active' : 'menu-link' } 
+    title="Rules And Regulation " 
+    id="basic-nav-dropdown-sub"
+    >
+    <Link href="/pdf/Attendance-Rules.pdf" target="_blank" onClick={closeNav}>
+    Rules for Attendance
+    </Link>
+    <Link href="/about/rules_of_examination" onClick={closeNav}>
+    Rules of Examination
+    </Link>
+    <Link href="/pdf/rules-for-backlog.pdf" target="_blank"  onClick={closeNav}>
+    Rules for Backlog
+    </Link>
+    <Link href="/pdf/gold-medals-regulations.pdf" target="_blank" onClick={closeNav}>
+    Gold Medals Regulation
+    </Link> 
+    <Link href="/about/hostels_rules" onClick={closeNav}>
+    Hostels Rules
+    </Link>
+    <Link href="/pdf/library-rules-and-regulation.pdf" target="_blank" onClick={closeNav}>
+    Library Rules and Regulation
+    </Link>
+    <Link href="/pdf/rules-for-alumni-association.pdf" target="_blank" onClick={closeNav}>
+    Rules for Alumni Association
+    </Link>
+    <Link href="/pdf/administrative-and-management-regulations-2017.pdf" target="_blank" onClick={closeNav}>
+    Administrative and Management Regulations, 2017
+    </Link>
+    </NavDropdown>
+
+    <NavDropdown 
+    title="Governing Bodies" 
+    id="basic-nav-dropdown-sub"
+    >
+    <Link onClick={closeNav} href="/about/internal_management_structure" >
+    Internal Management Structure
+    </Link>
+
+    <Link onClick={closeNav} href="/pdf/academic-council.pdf" target='_blank'>
+    Academic Council
+    </Link>
+
+    <Link onClick={closeNav} href="/pdf/executive-council.pdf" target="_blank">
+    Executive Council
+    </Link>
+
+    <Link onClick={closeNav} href="/pdf/general-council.pdf" target="_blank">
+    General Council
+    </Link>
+
+    <Link onClick={closeNav} href="/pdf/academic-planning-development-board.pdf"  target="_blank">
+    Academic Planning &amp; Development Board
+    </Link>
+    </NavDropdown>
+
+    <NavDropdown 
+    className={ pathName == 'about/keypersonnel' ? 'menu-link active' : 'menu-link' } 
+    title="Key Personnel" 
+    id="basic-nav-dropdown-sub"
+    >
+
+    <Link onClick={closeNav} href="/about/keypersonnel/Rector" >
+    Rector
+    </Link>
+
+    <Link onClick={closeNav} href="/about/keypersonnel/Visitor" >
+    Visitor
+    </Link>
+
+    <Link onClick={closeNav} href="/about/keypersonnel/Chancellor">
+    Chancellor
+    </Link>
+
+    <Link onClick={closeNav} href="/about/keypersonnel/Vice_Chancellor" >
+    Vice Chancellor
+    </Link>
+
+    <Link onClick={closeNav} href="/about/keypersonnel/Assistant_Registrar">
+    Assistant Registrar (In charge)
+    </Link>
+    </NavDropdown>
+
+    <Link onClick={closeNav}  href="/about/rti" className="menu-link" >
+    RTI
+    </Link>
+    </NavDropdown>
 
 
-  <ul className="menu menu-bar main_nav">
-
-  <li className={ pathName == 'about' ? 'active' : '' }>
-              <Link
-              className="menu-link menu-bar-link"
-              aria-haspopup="true"
-              href="javascript:void(0);"
-              >
-              About Us
-              </Link>
-                <ul className="mega-menu mega-menu--multiLevel">
-                      <li>
-                      <Link className="menu-link" href="/about/vision">Vision</Link>
-                      </li>
-                      <li>
-                      <Link className="menu-link" href="/pdf/organisational-chart.pdf" target='_blank'>Organisational Chart</Link>
-                      </li>
-                      <li>
-                      <Link className="menu-link" href="/about/nusrl_act_2010">NUSRL Act 2010</Link>
-                      </li>
-                       <li className={ pathName == 'about/rules_of_examination' ? 'active' : '' }>
-                        <Link 
-                          href="javascript:void(0);" 
-                          className="menu-link" 
-                          aria-haspopup="true"
-                        >
-                          Rules And Regulation 
-                        </Link>
-                          <ul className="menu menu-list">
-                          <li>
-                          <Link className="menu-link"  href="/pdf/Attendance-Rules.pdf" target="_blank">
-                          Rules for Attendance
-                          </Link>
-                          </li>
-
-                          <li>
-                          <Link className="menu-link"  href="/about/rules_of_examination">
-                          Rules of Examination
-                          </Link>
-                          </li>
-
-                          <li>
-                          <Link className="menu-link"  href="/pdf/rules-for-backlog.pdf" target="_blank">
-                          Rules for Backlog
-                          </Link>
-                          </li>
-
-                          <li>
-                          <Link className="menu-link"  href="/pdf/gold-medals-regulations.pdf" target="_blank">
-                          Gold Medals Regulation
-                          </Link>
-                          </li>
-                          <li>
-                          <Link className="menu-link"  href="/about/hostels_rules">
-                          Hostels Rules
-                          </Link>
-                          </li>
-                          <li>
-                          <Link className="menu-link"  href="/pdf/library-rules-and-regulation.pdf" target="_blank">
-                          Library Rules and Regulation
-                          </Link>
-                          </li>
-
-                          <li>
-                          <Link className="menu-link"  href="/pdf/rules-for-alumni-association.pdf" target="_blank">
-                          Rules for Alumni Association
-                          </Link>
-                          </li>
-
-                          <li>
-                          <Link className="menu-link"  href="/pdf/administrative-and-management-regulations-2017.pdf" target="_blank">
-                          Administrative and Management Regulations, 2017
-                          </Link>
-                          </li>
-                          </ul>
-                    </li>
-                    <li className={ pathName == 'about/rules_of_examination' ? 'active' : '' }>
-                        <Link 
-                          href="javascript:void(0);" 
-                          className="menu-link" 
-                          aria-haspopup="true"
-                        >
-                          Governing Bodies
-                        </Link>
-                        <ul className="menu menu-list">
-                        <li>
-                        <Link className="menu-link" href="/about/internal_management_structure" >
-                        Internal Management Structure
-                        </Link>
-                        </li>
-
-                        <li>
-                        <Link className="menu-link" href="/pdf/academic-council.pdf" target='_blank'>
-                        Academic Council
-                        </Link>
-                        </li>
-
-                        <li>
-                        <Link className="menu-link" href="/pdf/executive-council.pdf" target="_blank">
-                        Executive Council
-                        </Link>
-                        </li>
-
-                        <li>
-                        <Link className="menu-link" href="/pdf/general-council.pdf" target="_blank">
-                        General Council
-                        </Link>
-                        </li>
-                        <li>
-                        <Link className="menu-link" href="/pdf/academic-planning-development-board.pdf"  target="_blank">
-                        Academic Planning &amp; Development Board
-                        </Link>
-                        </li>
-                        </ul>
-                    </li>
-
-                    <li className={ pathName == 'about/keypersonnel' ? 'active' : '' }>
-                        <Link 
-                          href="javascript:void(0);" 
-                          className="menu-link" 
-                          aria-haspopup="true"
-                        >
-                          Key Personnel
-                        </Link>
-                      <ul className="menu menu-list">
-                      <li>
-                      <Link className="menu-link" href="/about/keypersonnel/Rector" >
-                      Rector
-                      </Link>
-                      </li>
-
-                      <li>
-                      <Link className="menu-link" href="/about/keypersonnel/Visitor" >
-                      Visitor
-                      </Link>
-                      </li>
-
-                      <li>
-                      <Link className="menu-link" href="/about/keypersonnel/Chancellor">
-                      Chancellor
-                      </Link>
-                      </li>
-
-                      <li>
-                      <Link className="menu-link" href="/about/keypersonnel/Vice_Chancellor" >
-                      Vice Chancellor
-                      </Link>
-                      </li>
-                      <li>
-                      <Link className="menu-link" href="/about/keypersonnel/Assistant_Registrar">
-                      Assistant Registrar (In charge)
-                      </Link>
-                      </li>
-                      </ul>
-                    </li>
-                    <li className={ pathName == 'about' ? 'active' : '' }>
-                        <Link 
-                          href="/about/rti" 
-                          className="menu-link" 
-                          aria-haspopup="true"
-                        >
-                          RTI
-                        </Link>
-                     </li>   
-                   
-                </ul>
-            </li>
-
-
-              <li className={ pathName == 'university' ? 'active' : '' }>
-              <Link
-              className="menu-link menu-bar-link"
-              aria-haspopup="true"
-              href="javascript:void(0);"
-              >
-              The University
-              </Link>
-                <ul className="mega-menu mega-menu--multiLevel">
-                <li><Link className="menu-link" href="/pdf/academic-calendar.pdf" target='_blank'>Academic Calendar</Link></li>
-      <li><Link className="menu-link" href="/university/admission_form">Admission Form</Link></li>
-      <li><Link className="menu-link" href="/pdf/nirf.pdf" target='_blank'>NIRF</Link></li>
-      <li><Link className="menu-link" href="/university/audit_report">Audit Report</Link></li>
-                       <li className={ pathName == '/university/centres-of-learning' ? 'active' : '' }>
-                        <Link 
-                          href="javascript:void(0);" 
-                          className="menu-link" 
-                          aria-haspopup="true"
-                        >
-                         Centres of Learning 
-                        </Link>
-                          <ul className="menu menu-list">
-                          <li><Link className="menu-link" href="/university/centres-of-learning/care_ap">CARE-AP</Link></li>
-        <li><Link className="menu-link" href="/university/centres-of-learning/chrss">CHRSS</Link></li>
-        <li><Link className="menu-link" href="/university/centres-of-learning/clap">CLAP</Link></li>
-        <li><Link className="menu-link" href="/university/centres-of-learning/csrcr">CSRCR</Link></li>
-        <li><Link className="menu-link" href="/university/centres-of-learning/csripr">CSRIPR</Link></li>
-        <li><Link className="menu-link" href="/university/centres-of-learning/center_for_criminal_law_nusrl_ranchi">Center for Criminal Law, NUSRL Ranchi</Link></li>
-                          </ul>
-                    </li>
-
-                    <li><Link className="menu-link" href="/pdf/committees-centers-and-societies.pdf" target='_blank'>Committees, Centers And Societies</Link></li>
-      <li><Link className="menu-link" href="/pdf/donation-with-tax-exemption.pdf" target='_blank'>Donation with Tax Exemption</Link></li>
-      <li><Link className="menu-link" href="/university/faculties">Faculties</Link></li>
-
-
-                    <li className={ pathName == '/university/infrastructure/' ? 'active' : '' }>
-                        <Link 
-                          href="javascript:void(0);" 
-                          className="menu-link" 
-                          aria-haspopup="true"
-                        >
-                          Infrastructure
-                        </Link>
-                        <ul className="menu menu-list">
-                        <li><Link className="menu-link" href="/university/infrastructure/gymnasium">Gymnasium</Link></li>
-        <li><Link className="menu-link" href="/university/infrastructure/hostel">Hostel</Link></li>
-        <li><Link className="menu-link" href="/university/infrastructure/library">Library</Link></li>
-        <li><Link className="menu-link" href="/university/infrastructure/sports">Sports</Link></li>
-                        </ul>
-                    </li>
-
-                    <li><Link className="menu-link" href="/pd/NOCForm.pdf"  target='_blank'>N O C Form</Link></li>
-      <li><Link className="menu-link" href="/university/non_teaching_staffs">Non-Teaching Staffs</Link></li>
-                   
-                </ul>
-            </li>
-
-
-<li className={ pathName == 'payonline' ? 'active' : '' }>
-              <Link
-              className="menu-link menu-bar-link"
-              aria-haspopup="true"
-              href="javascript:void(0);"
-              >
-              Pay Online
-              </Link>
-                <ul className="mega-menu mega-menu--multiLevel">
-                       <li className={ pathName == 'PayOnline' ? 'active' : '' }>
-                        <Link 
-                          href="javascript:void(0);" 
-                          className="menu-link" 
-                          aria-haspopup="true"
-                        >
-                        HDFC Pay Online
-                        </Link>
-                          <ul className="menu menu-list">
-                          <li><Link className="menu-link" href="/PayOnline/hdfc_bank_account_details">HDFC Bank Account Details</Link></li>
-        <li><Link className="menu-link" href="/PayOnline/login_problem">Login problem ?</Link></li>
-        <li><Link className="menu-link" href="/pdf/QFIX-one-pager-app-web.pdf" target='_blank'>Help To Pay</Link></li>
-                          </ul>
-                    </li>
-                    <li><Link className="menu-link" href="/PayOnline/fee_statement">Fee Statement</Link></li>
-                   
-                </ul>
-            </li>
-            
-            <li className={ pathName == 'students' ? 'active' : '' }>
-              <Link
-              className="menu-link menu-bar-link"
-              aria-haspopup="true"
-              href="javascript:void(0);"
-              >
-              Students
-              </Link>
-                <ul className="mega-menu mega-menu--multiLevel">
-                <li><Link className="menu-link" href="/students/scholarship">Scholarship</Link></li>
-                <li><Link className="menu-link" href="/pdf/Rank-List_2.pdf" target='_blank'>Rank List</Link></li>
-                       <li className={ pathName == 'students/mentoring' ? 'active' : '' }>
-                        <Link 
-                          href="javascript:void(0);" 
-                          className="menu-link" 
-                          aria-haspopup="true"
-                        >
-                        Mentoring
-                        </Link>
-                          <ul className="menu menu-list">
-                          <li><Link className="menu-link" href="/students/mentoring/sharp">SHARP</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/endurance">ENDURANCE</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/grace">GRACE</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/drive">DRIVE</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/hope">HOPE</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/ideal">IDEAL</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/joy">JOY</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/calm">CALM</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/kind">KIND</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/time">TIME</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/truth">TRUTH</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/alert">ALERT</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/gyan">GYAN</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/energy">ENERGY</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/agile">AGILE</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/focus">FOCUS</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/steady">STEADY</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/swift">SWIFT</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/noble">NOBLE</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/firm">FIRM</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/">TOUGH</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/">WISDOM</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/">VISION</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/">PASSION</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/">EMPATHY</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/">STRENGTH</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/">BELIEF</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/">IMPACT</Link></li>
-<li><Link className="menu-link" href="/students/mentoring/">GUIDANCE</Link></li>
-                          </ul>
-                    </li>
-                    <li><Link className="menu-link" href="/students/phd_scholars">Ph.D. Scholars</Link></li>
-      <li><Link className="menu-link" href="/students/">Committees</Link></li>
-      <li><Link className="menu-link" href="/students/">Societies</Link></li>
-      <li><Link className="menu-link" href="/students/">Activities</Link></li>
-      <li><Link className="menu-link" href="/students/">Campus Life</Link></li>
-      <li><Link className="menu-link" href="/students/">Statutory Committees</Link></li>
-      <li><Link className="menu-link" href="/students/">Achievements</Link></li>
-      <li><Link className="menu-link" href="/students/endowmentsawards">Endowments/Awards</Link></li>
-      <li><Link className="menu-link" href="/students/internship_placement_committee">Internship &amp; Placement</Link></li>
-                   
-                </ul>
-            </li>      
-
-
-
-
-            <li className={ pathName == 'examinations' ? 'active' : '' }>
-              <Link
-              className="menu-link menu-bar-link"
-              aria-haspopup="true"
-              href="javascript:void(0);"
-              >
-              Examinations
-              </Link>
-                <ul className="mega-menu mega-menu--multiLevel">
-                <li><Link className="menu-link" href="/examinations/examinations_schedule">Examinations Schedule</Link></li>
-      <li><Link className="menu-link" href="/examinations/mid_term_project_result">Mid Term Result</Link></li>
-      <li><Link className="menu-link" href="/examinations/end_term_repeat_results">End Term Repeat Results</Link></li>
-      <li><Link className="menu-link" href="/examinations/end_term_results">End Term Results</Link></li>
-      <li><Link className="menu-link" href="/examinations/re_evaluation_result">Re-Evaluation Result</Link></li>
-      <li><Link className="menu-link" href="/examinations/attendance">Attendance</Link></li>
-      <li><Link className="menu-link" href="/examinations/examinations">Examination Backlog</Link></li>
-      <li><Link className="menu-link" href="/examinations/application_forms">Application &amp; Forms</Link></li>
-                   
-                </ul>
-            </li>  
-
-
-            <li className={ pathName == 'academic' ? 'active' : '' }>
-              <Link
-              className="menu-link menu-bar-link"
-              aria-haspopup="true"
-              href="javascript:void(0);"
-              >
-              Academic
-              </Link>
-                <ul className="mega-menu mega-menu--multiLevel">
-                <li><Link className="menu-link" href="/programmes">Under Graduate Programmes</Link></li>
-      <li><Link className="menu-link" href="/programmes">Center of post graduate studies</Link></li>
-      <li><Link className="menu-link" href="/programmes">Doctor of Philosophy (Ph.D)</Link></li>
-      <li><Link className="menu-link" href="/programmes">Certificate & Diploma Courses</Link></li>
-                   
-                </ul>
-            </li>  
-
-            <li className={ pathName == 'publications' ? 'active' : '' }>
-              <Link
-              className="menu-link menu-bar-link"
-              aria-haspopup="true"
-              href="javascript:void(0);"
-              >
-              Publications
-              </Link>
-                <ul className="mega-menu mega-menu--multiLevel">
-                <li><Link className="menu-link" href="/publications/journal">Journal</Link></li>
-      <li><Link className="menu-link" href="/publications/news_letter">News Letter</Link></li>
-      <li><Link className="menu-link" href="/publications/annual_report">Annual Report</Link></li>
-                   
-                </ul>
-            </li> 
-
-            <li className={pathName == 'tenders' ? 'active' : ''}>
-         <a href="/tenders/tenders">Tenders </a>
-    </li>
     
-    <li className={pathName == 'clat_2024_admission' ? 'active' : ''}>
-         <a href="/clat_2024_admission">Clat Admission 2024</a>
-    </li>
     
-    <li className={pathName == 'alumni' ? 'active' : ''}>
-         <a href="/alumni">Alumni</a>
-    </li>
+<NavDropdown 
+className={ pathName == 'university' ? 'menu-link active' : 'menu-link' } 
+title="The University" 
+id="basic-nav-dropdown-sub"
+>
+    <Link onClick={closeNav} href="/pdf/academic-calendar.pdf" target='_blank'>Academic Calendar</Link>
+<Link onClick={closeNav} href="/university/admission_form">Admission Form</Link>
+<Link onClick={closeNav} href="/pdf/nirf.pdf" target='_blank'>NIRF</Link>
+<Link onClick={closeNav} href="/university/audit_report">Audit Report</Link>
 
-    <li className={pathName == 'event_calendar' ? 'active' : ''}>
-         <a href="https://calendar.online/33293f7c86bf9ebbcd54" target='_blank'>Event Calendar</a>
-    </li> 
-        
-        </ul>
+<NavDropdown 
+className={ pathName == 'university/centres-of-learning' ? 'menu-link active' : 'menu-link' } 
+title="Centres of Learning " 
+id="basic-nav-dropdown-sub"
+>
+<Link onClick={closeNav} href="/university/centres-of-learning/care_ap">CARE-AP</Link>
+<Link onClick={closeNav} href="/university/centres-of-learning/chrss">CHRSS</Link>
+<Link onClick={closeNav} href="/university/centres-of-learning/clap">CLAP</Link>
+<Link onClick={closeNav} href="/university/centres-of-learning/csrcr">CSRCR</Link>
+<Link onClick={closeNav} href="/university/centres-of-learning/csripr">CSRIPR</Link>
+<Link onClick={closeNav} href="/university/centres-of-learning/center_for_criminal_law_nusrl_ranchi">Center for Criminal Law, NUSRL Ranchi</Link>
+</NavDropdown>
+<Link onClick={closeNav} href="/pdf/committees-centers-and-societies.pdf" target='_blank'>Committees, Centers And Societies</Link>
+<Link onClick={closeNav} href="/pdf/donation-with-tax-exemption.pdf" target='_blank'>Donation with Tax Exemption</Link>
+<Link onClick={closeNav} href="/university/faculties">Faculties</Link>
+<NavDropdown 
+className={ pathName == 'university/infrastructure' ? 'menu-link active' : 'menu-link' } 
+title="Infrastructure" 
+id="basic-nav-dropdown-sub"
+>
+<Link onClick={closeNav} href="/university/infrastructure/gymnasium">Gymnasium</Link>
+<Link onClick={closeNav} href="/university/infrastructure/hostel">Hostel</Link>
+<Link onClick={closeNav} href="/university/infrastructure/library">Library</Link>
+<Link onClick={closeNav} href="/university/infrastructure/sports">Sports</Link>
+</NavDropdown>
 
- 
+<Link onClick={closeNav} href="/pd/NOCForm.pdf"  target='_blank'>N O C Form</Link>
+<Link onClick={closeNav} href="/university/non_teaching_staffs">Non-Teaching Staffs</Link>
+    </NavDropdown>
 
+    
+    <NavDropdown 
+className={ pathName == 'payonline' ? 'menu-link active' : 'menu-link' } 
+title="Pay Online" 
+id="basic-nav-dropdown"
+>
+<NavDropdown 
+className={ pathName == 'university/centres-of-learning' ? 'menu-link active' : 'menu-link' } 
+title="HDFC Pay Online" 
+id="basic-nav-dropdown-sub"
+>
+<Link onClick={closeNav} href="/PayOnline/hdfc_bank_account_details">HDFC Bank Account Details</Link>
+<Link onClick={closeNav} href="/PayOnline/login_problem">Login problem ?</Link>
+<Link onClick={closeNav} href="/pdf/QFIX-one-pager-app-web.pdf" target='_blank'>Help To Pay</Link>
+</NavDropdown>
+<Link onClick={closeNav} href="/PayOnline/fee_statement">Fee Statement</Link>
+</NavDropdown>
+
+<NavDropdown 
+className={ pathName == 'Students' ? 'menu-link active' : 'menu-link' } 
+title="Students" 
+id="basic-nav-dropdown"
+>
+<Link onClick={closeNav}  href="/students/scholarship">Scholarship</Link>
+<Link onClick={closeNav}  href="/pdf/Rank-List_2.pdf" target='_blank'>Rank List</Link>
+<NavDropdown 
+className={ pathName == 'students/mentoring' ? 'menu-link active' : 'menu-link' } 
+title="Mentoring" 
+id="basic-nav-dropdown-sub"
+>
+<Link onClick={closeNav}  href="/students/mentoring/sharp">SHARP</Link>
+<Link onClick={closeNav}  href="/students/mentoring/endurance">ENDURANCE</Link>
+<Link onClick={closeNav}  href="/students/mentoring/grace">GRACE</Link>
+<Link onClick={closeNav}  href="/students/mentoring/drive">DRIVE</Link>
+<Link onClick={closeNav}  href="/students/mentoring/hope">HOPE</Link>
+<Link onClick={closeNav}  href="/students/mentoring/ideal">IDEAL</Link>
+<Link onClick={closeNav}  href="/students/mentoring/joy">JOY</Link>
+<Link onClick={closeNav}  href="/students/mentoring/calm">CALM</Link>
+<Link onClick={closeNav}  href="/students/mentoring/kind">KIND</Link>
+<Link onClick={closeNav}  href="/students/mentoring/time">TIME</Link>
+<Link onClick={closeNav}  href="/students/mentoring/truth">TRUTH</Link>
+<Link onClick={closeNav}  href="/students/mentoring/alert">ALERT</Link>
+<Link onClick={closeNav}  href="/students/mentoring/gyan">GYAN</Link>
+<Link onClick={closeNav}  href="/students/mentoring/energy">ENERGY</Link>
+<Link onClick={closeNav}  href="/students/mentoring/agile">AGILE</Link>
+<Link onClick={closeNav}  href="/students/mentoring/focus">FOCUS</Link>
+<Link onClick={closeNav}  href="/students/mentoring/steady">STEADY</Link>
+<Link onClick={closeNav}  href="/students/mentoring/swift">SWIFT</Link>
+<Link onClick={closeNav}  href="/students/mentoring/noble">NOBLE</Link>
+<Link onClick={closeNav}  href="/students/mentoring/firm">FIRM</Link>
+<Link onClick={closeNav}  href="/students/mentoring/tough">TOUGH</Link>
+<Link onClick={closeNav}  href="/students/mentoring/wisdom">WISDOM</Link>
+<Link onClick={closeNav}  href="/students/mentoring/vision">VISION</Link>
+<Link onClick={closeNav}  href="/students/mentoring/passion">PASSION</Link>
+<Link onClick={closeNav}  href="/students/mentoring/empathy">EMPATHY</Link>
+<Link onClick={closeNav}  href="/students/mentoring/strength">STRENGTH</Link>
+<Link onClick={closeNav}  href="/students/mentoring/belief">BELIEF</Link>
+<Link onClick={closeNav}  href="/students/mentoring/impact">IMPACT</Link>
+<Link onClick={closeNav}  href="/students/mentoring/guidance">GUIDANCE</Link>
+</NavDropdown>
+<Link onClick={closeNav}  href="/students/phd_scholars">Ph.D. Scholars</Link>
+
+<NavDropdown 
+className={ pathName == 'students/committees' ? 'menu-link active' : 'menu-link' } 
+title="Committees" 
+id="basic-nav-dropdown-sub"
+>
+<Link onClick={closeNav}  href="/students/committees/moot_court_committee">Moot Court Committee</Link>
+<Link onClick={closeNav}  href="/students/committees/it_committee">IT Committee</Link>
+<Link onClick={closeNav}  href="/students/committees/library_committee">Library Committee</Link>
+<Link onClick={closeNav}  href="/students/committees/cultural_committee">Cultural Committee</Link>
+<Link onClick={closeNav}  href="/students/committees/board_for_regulation_of_sports">Board for Regulation of Sports</Link>
+</NavDropdown>
+<NavDropdown 
+className={ pathName == 'students/societies' ? 'menu-link active' : 'menu-link' } 
+title="Societies" 
+id="basic-nav-dropdown-sub"
+>
+<Link onClick={closeNav}  href="/students/societies/isbn">ISBN</Link>
+<Link onClick={closeNav}  href="/students/societies/NUSRL_through_lenses">NUSRL Through Lenses</Link>
+<Link onClick={closeNav}  href="/students/societies/constitutional_law_club">Constitutional Law Club</Link>
+</NavDropdown>
+
+<NavDropdown 
+className={ pathName == 'students/activities' ? 'menu-link active' : 'menu-link' } 
+title="Activities" 
+id="basic-nav-dropdown-sub"
+>
+<Link onClick={closeNav}  href="/students/activities/seminars">Seminars</Link>
+<Link onClick={closeNav}  href="/students/activities/moot_court">Moot Court</Link>
+<Link onClick={closeNav}  href="/students/activities/cultural_programs">Cultural Programs</Link>
+</NavDropdown>
+<Link onClick={closeNav}  href="/students/campus_life">Campus Life</Link>
+<NavDropdown 
+className={ pathName == 'students/statutorycommittees' ? 'menu-link active' : 'menu-link' } 
+title="Statutory Committees" 
+id="basic-nav-dropdown-sub"
+>
+<Link onClick={closeNav}  href="/students/statutorycommittees/anti_ragging_cell">Anti Ragging Cell</Link>
+<Link onClick={closeNav}  href="/students/statutorycommittees/grievance_redressal_committee">Grievance Redressal Committee</Link>
+<Link onClick={closeNav}  href="/students/statutorycommittees/internal_complaints_committee_icc">Internal Complaints Committee (ICC)</Link>
+</NavDropdown>
+
+<NavDropdown 
+className={ pathName == 'students/achievements' ? 'menu-link active' : 'menu-link' } 
+title="Achievements" 
+id="basic-nav-dropdown-sub"
+>
+<Link onClick={closeNav}  href="/students/achievements/sports">Sports</Link>
+<Link onClick={closeNav}  href="/students/achievements/moot_courts">Moot Courts</Link>
+</NavDropdown>
+<Link onClick={closeNav}  href="/students/endowmentsawards">Endowments/Awards</Link>
+<NavDropdown 
+className={ pathName == 'students/internshipplacement' ? 'menu-link active' : 'menu-link' } 
+title="Internship & Placement" 
+id="basic-nav-dropdown-sub"
+>
+<Link onClick={closeNav}  href="/students/internshipplacement/internship_placement_committee">Internship & Placement Committee</Link>
+<Link onClick={closeNav}  href="/students/internshipplacement/recruitment_co_ordination_commitee">Recruitment Co-Ordination Commitee</Link>
+<Link onClick={closeNav}  href="/students/internshipplacement/placement_brochure_2024">PLACEMENT BROCHURE 2024</Link>
+<Link onClick={closeNav}  href="/students/internshipplacement/recruitment_brochure">Recruitment Brochure</Link>
+<Link onClick={closeNav}  href="/students/internshipplacement/statistics">Statistics</Link>
+</NavDropdown>
+</NavDropdown>
+
+<NavDropdown 
+className={ pathName == 'examinations' ? 'menu-link active' : 'menu-link' } 
+title="Examinations" 
+id="basic-nav-dropdown"
+>
+<Link onClick={closeNav}  href="/examinations/examinations_schedule">Examinations Schedule</Link>
+<Link onClick={closeNav}  href="/examinations/mid_term_project_result">Mid Term Result</Link>
+<Link onClick={closeNav}  href="/examinations/end_term_repeat_results">End Term Repeat Results</Link>
+<Link onClick={closeNav}  href="/examinations/end_term_results">End Term Results</Link>
+<Link onClick={closeNav}  href="/examinations/re_evaluation_result">Re-Evaluation Result</Link>
+<Link onClick={closeNav}  href="/examinations/attendance">Attendance</Link>
+<Link onClick={closeNav}  href="/examinations/examinations">Examination Backlog</Link>
+<Link onClick={closeNav}  href="/examinations/application_forms">Application &amp; Forms</Link>
+</NavDropdown>
+
+<NavDropdown 
+className={ pathName == 'academic' ? 'menu-link active' : 'menu-link' } 
+title="Academic" 
+id="basic-nav-dropdown"
+>
+<Link onClick={closeNav} href="/programmes">Under Graduate Programmes</Link>
+<Link onClick={closeNav} href="/programmes">Center of post graduate studies</Link>
+<Link onClick={closeNav} href="/programmes">Doctor of Philosophy (Ph.D)</Link>
+<Link onClick={closeNav} href="/programmes">Certificate & Diploma Courses</Link>
+</NavDropdown>
+
+<NavDropdown 
+className={ pathName == 'publications' ? 'menu-link active' : 'menu-link' } 
+title="Publications" 
+id="basic-nav-dropdown"
+>
+<Link onClick={closeNav} href="/publications/journal">Journal</Link>
+<Link onClick={closeNav} href="/publications/news_letter">News Letter</Link>
+<Link onClick={closeNav} href="/publications/annual_report">Annual Report</Link>
+</NavDropdown>
+    
+<Link onClick={closeNav} className={pathName == 'tenders' ? 'menu-link active' : 'menu-link'} href="/tenders/tenders">
+Tenders
+</Link>
+
+<Link onClick={closeNav} className={pathName == 'clat_2024_admission' ? 'menu-link active' : 'menu-link'} href="/clat_2024_admission">
+Clat Admission 2024
+</Link>
+
+<Link onClick={closeNav} className={pathName == 'alumni' ? 'menu-link active' : 'menu-link'} href="/alumni">
+Alumni
+</Link>
+
+<Link onClick={closeNav} href="https://calendar.online/33293f7c86bf9ebbcd54" className='menu-link' target='_blank'>
+Event Calendar
+</Link>
+
+  </Nav>
+</Navbar.Collapse>
 </div>
-</nav>
+</Navbar>
+
+
+  
 )}
   </>
   );

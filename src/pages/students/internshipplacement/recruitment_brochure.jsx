@@ -2,7 +2,7 @@ import React,{ useState, useEffect} from "react";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Link from "next/link";
-const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmoreBlock'), {
+const DynamicknowmoreBlock = dynamic(() => import('../../../components/Home/knowmoreBlock'), {
   suspense: true,
 })
 const recruitment_brochure = () => {
