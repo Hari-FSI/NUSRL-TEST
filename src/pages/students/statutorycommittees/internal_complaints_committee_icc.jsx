@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Link from "next/link";
 import Image from 'next/image'
-const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmoreBlock'), {
+const DynamicknowmoreBlock = dynamic(() => import('../../../components/Home/knowmoreBlock'), {
   suspense: true,
 })
 const internal_complaints_committee_icc = () => {

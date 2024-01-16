@@ -45,7 +45,7 @@ module.exports = {
 const nextConfig = {
 swcMinify:true,  
 reactStrictMode:true,
-//output: 'export',
+output: 'export',
 images:{
   unoptimized: true,
   domains:['https://assets.rapidroute.in/']

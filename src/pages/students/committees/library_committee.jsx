@@ -5,13 +5,15 @@ import Link from "next/link";
 const DynamicknowmoreBlock = dynamic(() => import('../../../components/Home/knowmoreBlock'), {
   suspense: true,
 })
-const kind = () => {
+const library_committee = () => {
   const herobanner = [
     { id:1, 
-      title: "Kind", 
+      title: "Library Committee", 
       image: "/images/inner-banner.webp"
     }
   ];
+
+
   return (
     <>
     <section
@@ -30,18 +32,11 @@ const kind = () => {
 
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
-    <div className="list_of_pdfs">
     
+    <div className="list_of_pdfs">
+    <p className="mt_30">Dr. Arabinda Sahoo, Assistant Professor, NUSRL, Ranchi</p>
 
-    <div><p><strong>National University of Study &amp; Research in Law, Ranchi</strong></p>
-
-<p>Name of the Faculty&nbsp; : <strong>  Mr. Shubham Srivastava</strong></p>
-
-<p>Name of the Team &nbsp; :&nbsp;<strong>&nbsp; Kind</strong></p>
-
-
-</div>
-
+    <p className="mt_30">Mr. Shubham Srivastava, Assistant Professor, NUSRL, Ranchi</p>
 
     </div>
   </div>
@@ -51,4 +46,5 @@ const kind = () => {
     </>
   )
 }
-export default kind
+
+export default library_committee

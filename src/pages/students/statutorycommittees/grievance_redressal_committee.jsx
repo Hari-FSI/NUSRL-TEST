@@ -5,13 +5,15 @@ import Link from "next/link";
 const DynamicknowmoreBlock = dynamic(() => import('../../../components/Home/knowmoreBlock'), {
   suspense: true,
 })
-const kind = () => {
+const grievance_redressal_committee = () => {
   const herobanner = [
     { id:1, 
-      title: "Kind", 
+      title: "Grievance Redressal Committee", 
       image: "/images/inner-banner.webp"
     }
   ];
+
+
   return (
     <>
     <section
@@ -30,19 +32,9 @@ const kind = () => {
 
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
-    <div className="list_of_pdfs">
     
-
-    <div><p><strong>National University of Study &amp; Research in Law, Ranchi</strong></p>
-
-<p>Name of the Faculty&nbsp; : <strong>  Mr. Shubham Srivastava</strong></p>
-
-<p>Name of the Team &nbsp; :&nbsp;<strong>&nbsp; Kind</strong></p>
-
-
-</div>
-
-
+    <div className="list_of_pdfs">
+    <p className="mt_30">As per the guidelines of UGC, NUSRL, Ranchi has a students’ Grievance Redressal Committee. The function of this committee is to look into the complaints filed by any student and judge its merit.</p>
     </div>
   </div>
 </section>
@@ -51,4 +43,5 @@ const kind = () => {
     </>
   )
 }
-export default kind
+
+export default grievance_redressal_committee

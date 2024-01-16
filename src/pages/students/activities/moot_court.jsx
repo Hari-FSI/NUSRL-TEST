@@ -5,13 +5,15 @@ import Link from "next/link";
 const DynamicknowmoreBlock = dynamic(() => import('../../../components/Home/knowmoreBlock'), {
   suspense: true,
 })
-const kind = () => {
+const moot_court = () => {
   const herobanner = [
     { id:1, 
-      title: "Kind", 
+      title: "Moot Court", 
       image: "/images/inner-banner.webp"
     }
   ];
+
+
   return (
     <>
     <section
@@ -30,19 +32,20 @@ const kind = () => {
 
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
-    <div className="list_of_pdfs">
     
+    <div className="list_of_pdfs">
+    <div><h3 className="mb_15">NUSRL MOOT COURT COMMITTEE</h3>
 
-    <div><p><strong>National University of Study &amp; Research in Law, Ranchi</strong></p>
+<p>Email address: <a href="mailto:nusrl.mcc@gmail.com">nusrl.mcc@gmail.com</a></p>
 
-<p>Name of the Faculty&nbsp; : <strong>  Mr. Shubham Srivastava</strong></p>
+<p><strong>Chairperson</strong> : Mr. Koushik Bagchi<br/>
+Contact No.- +91-9431788639</p>
 
-<p>Name of the Team &nbsp; :&nbsp;<strong>&nbsp; Kind</strong></p>
+<p><strong>Co-Chairperson</strong> : Mrs. Hiral Mehta<br/>
+Contact No.- +91-8051176055</p>
 
-
+<h3>For more details <a class="gov_links" href="https://nusrlmooting.wordpress.com/" target="_blank">Click here</a></h3>
 </div>
-
-
     </div>
   </div>
 </section>
@@ -51,4 +54,5 @@ const kind = () => {
     </>
   )
 }
-export default kind
+
+export default moot_court

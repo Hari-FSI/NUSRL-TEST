@@ -1,3 +1,4 @@
+
 import React,{ useState, useEffect} from "react";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
@@ -5,13 +6,15 @@ import Link from "next/link";
 const DynamicknowmoreBlock = dynamic(() => import('../../../components/Home/knowmoreBlock'), {
   suspense: true,
 })
-const kind = () => {
+const belief = () => {
   const herobanner = [
     { id:1, 
-      title: "Kind", 
+      title: "Belief", 
       image: "/images/inner-banner.webp"
     }
   ];
+
+
   return (
     <>
     <section
@@ -35,9 +38,9 @@ const kind = () => {
 
     <div><p><strong>National University of Study &amp; Research in Law, Ranchi</strong></p>
 
-<p>Name of the Faculty&nbsp; : <strong>  Mr. Shubham Srivastava</strong></p>
+<p>Name of the Faculty&nbsp; : <strong> Mr. Soumyajit Mukhopadhyay</strong></p>
 
-<p>Name of the Team &nbsp; :&nbsp;<strong>&nbsp; Kind</strong></p>
+<p>Name of the Team &nbsp; :&nbsp;<strong>&nbsp; Belief</strong></p>
 
 
 </div>
@@ -51,4 +54,10 @@ const kind = () => {
     </>
   )
 }
-export default kind
+
+export default belief
+
+
+
+
+
