@@ -325,7 +325,8 @@
   
   
   /*Nav*/
-  nav {
+  nav,
+  .navbar {
     display: block;
     align-items: center;
     align-content: flex-start;
@@ -394,7 +395,7 @@
     font: var(--font-h3);
     color: #aaa;
     padding: 5px 0;
-    display: flex;
+    display: flex;    position: relative;
 }
 .menu .menu-link a.show.nav-link,
   .menu .menu-link:hover,

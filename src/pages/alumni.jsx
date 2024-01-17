@@ -41,14 +41,14 @@ const alumni = () => {
     <section className="container">
 <div className="text_para mt_30">
   <div className="text_para_section">
-  <h3 className="mt_10">National University of Study and Research in Law Alumni Association</h3>
+  <h4 className="mb_15">National University of Study and Research in Law Alumni Association</h4>
     <p className="">(Registered in Ranchi under the Societies Registration Act, 1860 with registration number: 326/2022)</p>
   
   </div>
   </div>
   </section>
 <section className="container mt_30 mb_60">
-  <h4 className="mt_15">Current office bearers:</h4>
+  <h4 className="mb_15">Current office bearers:</h4>
 <div className="table-responsive mt_15 mb_15">
 <table>
 <tbody>
@@ -62,7 +62,6 @@ const alumni = () => {
 <tr key={person.id}>
 <td>{person.id}</td>
 <td>{person.title}</td>
-<td>{person.desination}</td>
 <td><Link href={`mailto:${person.email}`}>{person.email}</Link></td>
 <td><Link href={`tel:${person.phone}`}>{person.phone}</Link></td>
 </tr>
