@@ -395,12 +395,12 @@
     font: var(--font-h3);
     color: #aaa;
     padding: 5px 0;
-    display: flex;    position: relative;
+    display: flex;    
+    position: relative;
 }
 .menu .menu-link a.show.nav-link,
   .menu .menu-link:hover,
   .menu .menu-link:focus{color: #fff;}
-
 
   .menu .dropdown-menu a{
     color: #aaa;
