@@ -15,7 +15,7 @@ const FooterMain = () => {
     <div className="center_logo">
       <Link href="/" className="logo_section">
         <Image
-        classNameName='logo_img'
+        className='logo_img'
         src="/images/logo.png"
         alt="logo"
         width={70}
@@ -159,7 +159,7 @@ const FooterMain = () => {
         <Link href="https://www.flyingstars.co/" target="_blank">
         <Image 
         src="/images/fsi-logo.png" 
-        classNameName='fsilogo' 
+        className='fsilogo' 
         alt="FSI Logo"
         width={20}
         height={30} 
