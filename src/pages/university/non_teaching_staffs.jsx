@@ -20,14 +20,14 @@ const non_teaching_staffs = () => {
   return (
     <>
     <section
-    classNameName="hero inner-banner"
+    className="hero inner-banner"
     style={{
     backgroundImage: `url(${herobanner[0].image})`,
     height: '300px',
     }}
     >
-    <div classNameName="container">   
-    <div classNameName="hero_text">
+    <div className="container">   
+    <div className="hero_text">
     <h4>{herobanner[0].title}</h4>
     </div>
     </div>

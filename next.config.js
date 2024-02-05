@@ -37,6 +37,9 @@ module.exports = withPlugins([
 ]);
 
 module.exports = {
+
+  basePath: '/',
+  
   useFileSystemPublicRoutes: false,
 
   target: 'serverless', // or 'server' if you are using a custom server
