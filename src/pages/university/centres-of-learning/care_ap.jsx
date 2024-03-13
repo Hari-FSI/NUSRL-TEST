@@ -6,6 +6,9 @@ import Image from 'next/image'
 const DynamicknowmoreBlock = dynamic(() => import('../../../components/Home/knowmoreBlock'), {
     suspense: true,
   })
+  const DynamicuniversityMenu = dynamic(() => import('../../../components/HeaderMain/universityMenu'), {
+    suspense: true,
+  }) 
 const care_ap = () => {
 
     const herobanner = [
@@ -21,7 +24,6 @@ const care_ap = () => {
     className="hero inner-banner"
     style={{
     backgroundImage: `url(${herobanner[0].image})`,
-    height: '300px',
     }}
     >
     <div className="container">   
@@ -31,9 +33,22 @@ const care_ap = () => {
     </div>
     </section>
 
-    <section className="un_messge container">
-  <div className="text_block">
-    <h4 className="mb+_15">About CARE-AP</h4>
+    <section className="container">
+    <div className="row">
+    <div className="col-md-3">
+    <Suspense fallback={<div>Loading...</div>}><DynamicuniversityMenu /></Suspense>
+    </div>
+    <div className="col-md-9 mt_30"> 
+  <div className="text_block text-justify">
+  <div className="image height-auto pull-right" style={{ padding: '0 0 15px 30px' }} >
+      <Image 
+      src="/images/careap.jpg"
+      alt="CARE-AP"
+      width={240}
+      height={360}
+      />
+    </div>
+    <h4 className="mb_15">About CARE-AP</h4>
 
 <p>Centre for Advocacy and Research in Environment and Animal Protection (CARE-AP)</p>
 
@@ -45,32 +60,18 @@ const care_ap = () => {
 
 
   </div>
-  <div className="img_block">
-  
-    <div className="image">
-      <Image 
-      src="/images/careap.jpg"
-      alt="CARE-AP"
-      width={240}
-      height={360}
-      />
-    </div>
-  
-  </div>
-  <hr/>
-</section> 
 
-    <section className="container">
-<div className="text_para ">
-  <div className="text_para_section">
+
+  <div className="text_para ">
+  <div className="text_para_section text-justify" >
   <p>At present the centre comprises of 5 Teams working on different aspect:</p>
 <ul><li><strong>Event: -</strong> to organize various events including seminars, symposium, conference, lecture series, talk shows, awareness camps among others;</li>
 	<li><strong>Litigation:-</strong> to ensure competent legal representation for environmental issues and issues related to animal rights in various parts of India, irrespective of the any classification;</li>
 	<li><strong>Publication: -</strong> to publish materials including books, edited books, journal, research articles, papers etc. focusing on environmental issues and animal rights;</li>
 	<li><strong>Public Affairs and Management (PAM):-</strong> to explore new fronts and methods for discussing the rise of environmental issues and animal rights issues among various stakeholders including engagement with legislators, judges, legal services authorities, and the general public;</li>
 	<li><strong>Research: -</strong> to identify and undertake new avenues of research on the administration of the environmental issues and animal rights issues that deepens our understanding of the issues, challenges and also to find a reasonable solution to the problem. Our research activities use various methodologies including a significant emphasis on empirical work.</li>
-</ul><h3>Our recent endeavour includes:</h3>
-
+</ul>
+<h4 className="mt_30 mb_15">Our recent endeavour includes:</h4>
 <ul><li>Organising National Seminar on Environmental Laws held on 5th June 2016 on occasion of World Environment Day,</li>
 	<li>Celebrating Van Mahotsav, on 12th August 2016, where a massive plantation drive was initiated and more than 1100 sapling were planted in the university campus,</li>
 	<li>Organising a National Symposium on Environmental Justice in 21st Century on 27th May 2017 and</li>
@@ -80,7 +81,7 @@ const care_ap = () => {
 
 <p>Our students (Mohit and Sakshi Jamuar) have participated in Wipro-Earthian Contest and were adjudged winners and won a cash prize of Rs. 1.5 Lakh Rupees. The students also secured an internship with Wipro.</p>
 
-<h3>Contact:</h3>
+<h4 className="mt_30 mb_15">Contact:</h4>
 
 <p>Centre for Advocacy and Research in Environment and Animal Protection (CARE-AP),</p>
 
@@ -90,7 +91,7 @@ const care_ap = () => {
 
 <p>Email: careap@nusrlranchi.ac.in</p>
 
-<h3>Office Bearers:</h3>
+<h4 className="mt_30 mb_15">Office Bearers:</h4>
 
 <p>Dr. Rabindra Kr. Pathak, Akash Pandey,</p>
 
@@ -101,6 +102,14 @@ const care_ap = () => {
 <p>Mob No: +91-7063033448 Mob No: +91-8271852292/ Whatsapp: +91-8797777879</p>
   </div>
 </div>
+  
+  </div>
+
+  
+
+  </div>
+
+
 </section>
 
 <Suspense fallback={<div>Loading...</div>}><DynamicknowmoreBlock /></Suspense>

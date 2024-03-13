@@ -19,8 +19,7 @@ const moot_court = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -34,7 +33,8 @@ const moot_court = () => {
   <div className="pdfs_as_list">
     
     <div className="list_of_pdfs">
-    <div><h3 className="mb_15">NUSRL MOOT COURT COMMITTEE</h3>
+    <div>
+      <h4 className="mb_15">NUSRL MOOT COURT COMMITTEE</h4>
 
 <p>Email address: <a href="mailto:nusrl.mcc@gmail.com">nusrl.mcc@gmail.com</a></p>
 
@@ -44,7 +44,7 @@ Contact No.- +91-9431788639</p>
 <p><strong>Co-Chairperson</strong> : Mrs. Hiral Mehta<br/>
 Contact No.- +91-8051176055</p>
 
-<h3>For more details <a class="gov_links" href="https://nusrlmooting.wordpress.com/" target="_blank">Click here</a></h3>
+<p>For more details <a class="gov_links" href="https://nusrlmooting.wordpress.com/" target="_blank">Click here</a></p>
 </div>
     </div>
   </div>

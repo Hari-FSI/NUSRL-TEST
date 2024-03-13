@@ -9,7 +9,7 @@ const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmor
 const news_letter = () => {
   const herobanner = [
     { id:1, 
-      title: "Journal", 
+      title: "NEWS Letter", 
       image: "/images/inner-banner.webp"
     }
   ];
@@ -19,7 +19,7 @@ const news_letter = () => {
       { id: 1, 
         title: "For more info", 
         image:"/images/news-letters.webp",
-        link: "pdf/1548758734138_NUSRL-NEWSLETTER-1.pdf",
+        link: "/pdf/1548758734138_NUSRL-NEWSLETTER-1.pdf",
         target:"_blank"
       }
       
@@ -31,8 +31,7 @@ const news_letter = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   

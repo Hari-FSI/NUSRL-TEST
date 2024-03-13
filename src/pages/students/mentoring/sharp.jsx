@@ -19,8 +19,7 @@ const sharp = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -42,14 +41,16 @@ const sharp = () => {
 <div className="table-responsive mt_30">
 
 <table>
-<tbody>
+<thead>
 <tr>
-<td>1<sup>st</sup>&nbsp;Semester</td>
-<td>3<sup>rd</sup> Semester</td>
-<td>5<sup>th</sup>&nbsp;Semester</td>
-<td>7<sup>th</sup> Semester</td>
-<td>9<sup>th</sup> Semester</td>
+<th>1<sup>st</sup>&nbsp;Semester</th>
+<th>3<sup>rd</sup> Semester</th>
+<th>5<sup>th</sup>&nbsp;Semester</th>
+<th>7<sup>th</sup> Semester</th>
+<th>9<sup>th</sup> Semester</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td >Allen Toppo</td>
 <td>Chandrashekhar Honhaga</td>

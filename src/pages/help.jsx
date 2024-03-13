@@ -19,8 +19,7 @@ const help = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -32,12 +31,12 @@ const help = () => {
 
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
-    <div className="list_of_pdfs">
+    <div className="list_of_pdfs <p>&nbsp;</p>">
     <div ><h4 className="mb_15">Viewing Information in Various File Formats</h4>
 
 <p>The information provided by this website is available in various file formats, such as Portable Document Format (PDF), Word, Excel and PowerPoint. To view the information properly, your browser needs to have the required plug-ins or software. For example, the Adobe Flash software is required to view the Flash files. In case your system does not have this software, you can download it from the Internet for free. The table lists the required plug-ins needed to view the information in various file formats.</p>
 
-<h4 className="mb_15">Plug-in for alternate document types</h4>
+<h4 className="mb_15 mt_30">Plug-in for alternate document types</h4>
 
 <div className="cc-cell">
 <table><tbody><tr><th>Document Type</th>

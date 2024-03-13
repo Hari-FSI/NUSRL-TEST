@@ -8,7 +8,7 @@ const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmor
 const diploma_Fee_Statement = () => {
   const herobanner = [
     { id:1, 
-      title: "Diploma Fee Statement", 
+      title: "Certificate & Diploma Courses", 
       image: "/images/inner-banner.webp"
     }
   ];
@@ -19,8 +19,7 @@ const diploma_Fee_Statement = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -33,14 +32,14 @@ const diploma_Fee_Statement = () => {
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
     <div className="list_of_pdf_titles">
-      <h5>Links</h5>
       <p><Link href="/programmes/diploma_admissions">Diploma Admission</Link></p>
       <p ><Link href="/programmes/diploma_course_description">Diploma Course Description</Link></p>
       <p ><Link href="/programmes/diploma__syllabus">Diploma Syllabus</Link></p>
       <p className="active"><Link href="/programmes/diploma_Fee_Statement">Diploma Fee Structure</Link></p>
     </div>
     <div className="list_of_pdfs">
-    <p className="mt_30 text-center">Content not Available.</p>
+    <h4 className="mb_15">Diploma Fee Structure</h4>
+    <p className="mt_30">Content not Available.</p>
     </div>
   </div>
 </section>

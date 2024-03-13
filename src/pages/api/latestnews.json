@@ -2,32 +2,42 @@
     "news": [
         {
             "id": 5,
+            "newtaq": "show",
             "title": "Tender Notice -Financial Bid Of Security Service Tender 2023",
             "link": "/pdf/Tender-Notice-financial-bid-opening-time.pdf",
+            "date": "06-03-2024",
             "target": "_blank"
         },
         {
             "id": 4,
+            "newtaq": "show",
             "title": "5th Convocation Notice",
             "link": "/pdf/5th-Convocation-Notice.pdf",
+            "date": "06-03-2024",
             "target": "_blank"
         },
         {
             "id": 3,
+            "newtaq": "hide",
             "title": "Advertisement For One Technical Consultant Position In CCR",
             "link": "/pdf/Advertisement-for-the-post-of-Technical-Consultant-CCR.pdf",
+            "date": "06-03-2024",
             "target": "_blank"
         },
         {
             "id": 2,
+            "newtaq": "show",
             "title": "Recrutiment Notification For Academic Positions",
             "link": "/recrutiment_notification_for_academic_positions",
+            "date": "06-03-2024",
             "target": "_self"
         },
         {
             "id": 1,
+            "newtaq": "hide",
             "title": "Extension of submission date for ph.d. Application form",
             "link": "/extension_of_submission_date_for_phd_application_form",
+            "date": "06-03-2024",
             "target": "_self"
         }
     ]

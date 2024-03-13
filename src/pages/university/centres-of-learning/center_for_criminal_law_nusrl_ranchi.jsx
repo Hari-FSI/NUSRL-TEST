@@ -6,6 +6,9 @@ import Image from 'next/image'
 const DynamicknowmoreBlock = dynamic(() => import('../../../components/Home/knowmoreBlock'), {
     suspense: true,
   })
+  const DynamicuniversityMenu = dynamic(() => import('../../../components/HeaderMain/universityMenu'), {
+    suspense: true,
+  }) 
 const center_for_criminal_law_nusrl_ranchi = () => {
 
     const herobanner = [
@@ -21,7 +24,6 @@ const center_for_criminal_law_nusrl_ranchi = () => {
     className="hero inner-banner"
     style={{
     backgroundImage: `url(${herobanner[0].image})`,
-    height: '300px',
     }}
     >
     <div className="container">   
@@ -32,9 +34,21 @@ const center_for_criminal_law_nusrl_ranchi = () => {
     </section>
 
     <section className="un_messge container">
-  <div className="text_block">
+    <div className="row">
+    <div className="col-md-3">
+    <Suspense fallback={<div>Loading...</div>}><DynamicuniversityMenu /></Suspense>
+    </div>
+    <div className="col-md-9  pt_30"> 
+  <div className="text_block text-justify">
   <h4 className="mt_15">About the Center</h4>
-
+  <div className="text-center">
+      <Image 
+      src="/images/ccl-logo.jpg"
+      alt="Chrss"
+      width={240}
+      height={360}
+      />
+    </div>
 <p>With the changing times the societal norms also change and people who are part of the society have to accept this change either by way of compromise or any other way in order to adjust and make them still the part of the very same society. This led to the journey of no criminal law in uncivilized society to Penal Provisions in civilised society. Considering the quantum of resources in the nature of funds, manpower and expertise that have been committed and/or expended in pursuance to these laws and policies, it is expedient to assess and evaluate their success, study and learn from their short-comings which can be worked upon and identify areas which are yet to fall within the ambit of governmental largesse. Law is subject to change with times and the same applies to Criminal Law.</p>
 
 <p>Center for Criminal Law was established in 2017 to study the Contemporary Issues and Challenges in Criminal Law. Center for Criminal Law has been one of the most active academics societies in the area of Criminal Law in NUSRL. This Center provides to the future lawmakers and lawyers an opportunity to understand the depth of criminal justice system and developing strategies to mitigate the threat to this system. Center promotes and encourages its students for research in the field of Criminal Law.</p>
@@ -118,19 +132,9 @@ const center_for_criminal_law_nusrl_ranchi = () => {
 <p>&nbsp;</p>
 
   </div>
-  <div className="img_block">
-  
-    <div className="image">
-      <Image 
-      src="/images/ccl-logo.jpg"
-      alt="Chrss"
-      width={240}
-      height={360}
-      />
-    </div>
   
   </div>
-  <hr/>
+  </div>
 </section> 
 
 <Suspense fallback={<div>Loading...</div>}><DynamicknowmoreBlock /></Suspense>

@@ -19,8 +19,7 @@ const sports = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -38,22 +37,20 @@ const sports = () => {
     <p className="text-center mb_15">
         <img height="359" src="/images/sport.jpg" width="612" />
         </p>
-        <p><strong>VIRUDHAKA 2013, organized by NLIU, Bhopal</strong></p>
+        <h4 className="mb_15">VIRUDHAKA 2013, organized by NLIU, Bhopal</h4>
 <ol>
 <li>&nbsp; Anmol Deepak won gold in the high jump.</li>
 <li>&nbsp; Abhishek Singh Negi won silver in 200 meters.</li>
 <li>&nbsp; Sudhanshu Prakash won gold in a 110-meter hurdle and silver in 100 meters.</li>
 </ol>
-<p>&nbsp;</p>
-<p><strong>KARVAAN 2014, organized by KIIT Law School</strong></p>
+<h4 className="mt_30 mb_15">KARVAAN 2014, organized by KIIT Law School</h4>
 <ol>
 <li>&nbsp; winner in football</li>
 <li>&nbsp; runners up in cricket</li>
 <li>&nbsp; runners up in basketball</li>
 <li>&nbsp; runners up in volleyball</li>
 </ol>
-<p>&nbsp;</p>
-<p><strong>COLOSSUS 2015, organized by HNLU, Raipur</strong></p>
+<h4 className="mt_30 mb_15">COLOSSUS 2015, organized by HNLU, Raipur</h4>
 <ol>
 <li>&nbsp; winners in street cricket</li>
 <li>&nbsp; winner in badminton girls</li>
@@ -61,17 +58,15 @@ const sports = () => {
 <li>&nbsp; runners up in basketball girls</li>
 <li>&nbsp; runners up in street football girls</li>
 </ol>
-<p>&nbsp;</p>
-<p><strong>Winner in football match conducted by RIMS, Ranchi on the eve of Independence Day.</strong></p>
-<p><br /> <strong>RUSH 2015, organized by IIM, Ranchi</strong></p>
+<h4 className="mt_30 mb_15">Winner in football match conducted by RIMS, Ranchi on the eve of Independence Day.</h4>
+<h4 className="mt_30 mb_15">RUSH 2015, organized by IIM, Ranchi</h4>
 <ol>
 <li>&nbsp; winner in football in RUSh 2015</li>
 <li>&nbsp; runners up in volleyball in RUSH 2015</li>
 <li>&nbsp; winner in girls 100 meters, 200 meters, and 4*100 meter relay</li>
 <li>&nbsp; runners up in badminton girls</li>
 </ol>
-<p>&nbsp;</p>
-<p><strong>COLOSSUS 2016, organized by HNLU, Raipur</strong></p>
+<h4 className="mt_30 mb_15">COLOSSUS 2016, organized by HNLU, Raipur</h4>
 <ol>
 <li>&nbsp; winner in street cricket</li>
 <li>&nbsp; winner in Throwball</li>

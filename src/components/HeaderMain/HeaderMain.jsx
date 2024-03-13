@@ -75,8 +75,38 @@ const HeaderMain = () => {
     event.preventDefault();
     setIsOpen(!isOpen);
   };
+
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const loader = document.querySelector('.page-loader');
+      if (loader) {
+        loader.style.transition = 'opacity 0.5s ease';
+        loader.style.opacity = '0';
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 500); // Fading out duration
+      }
+    }, 2000); // Loader display duration
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
 <>
+
+<div className="page-loader">
+      <div className="spinner">
+        <Image
+        src="/images/logo.png"
+        alt="logo"
+        width={86}
+        height={94} 
+        />
+      </div>
+    </div>
+    
   <header id="header" ref={headerRef}>
     <Link href="/" className="logo_section">
         <Image
@@ -150,7 +180,7 @@ const HeaderMain = () => {
     <Link href="/pdf/Attendance-Rules.pdf" target="_blank" onClick={closeNav}>
     Rules for Attendance
     </Link>
-    <Link href="/about/rules_of_examination" onClick={closeNav}>
+    <Link href="/about/rules_regulation/rules_of_examination" onClick={closeNav}>
     Rules of Examination
     </Link>
     <Link href="/pdf/rules-for-backlog.pdf" target="_blank"  onClick={closeNav}>
@@ -159,7 +189,7 @@ const HeaderMain = () => {
     <Link href="/pdf/gold-medals-regulations.pdf" target="_blank" onClick={closeNav}>
     Gold Medals Regulation
     </Link> 
-    <Link href="/about/hostels_rules" onClick={closeNav}>
+    <Link href="/about/rules_regulation/hostels_rules" onClick={closeNav}>
     Hostels Rules
     </Link>
     <Link href="/pdf/library-rules-and-regulation.pdf" target="_blank" onClick={closeNav}>
@@ -177,7 +207,7 @@ const HeaderMain = () => {
     title="Governing Bodies" 
     id="basic-nav-dropdown-sub"
     >
-    <Link onClick={closeNav} href="/about/internal_management_structure" >
+    <Link onClick={closeNav} href="/about/governing_bodies/internal_management_structure" >
     Internal Management Structure
     </Link>
 
@@ -253,7 +283,7 @@ id="basic-nav-dropdown-sub"
 <Link onClick={closeNav} href="/university/centres-of-learning/clap">CLAP</Link>
 <Link onClick={closeNav} href="/university/centres-of-learning/csrcr">CSRCR</Link>
 <Link onClick={closeNav} href="/university/centres-of-learning/csripr">CSRIPR</Link>
-<Link onClick={closeNav} href="/university/centres-of-learning/center_for_criminal_law_nusrl_ranchi">Center for Criminal Law, NUSRL Ranchi</Link>
+<Link onClick={closeNav} href="/university/centres-of-learning/center_for_criminal_law_nusrl_ranchi">Center for Criminal Law</Link>
 </NavDropdown>
 <Link onClick={closeNav} href="/pdf/committees-centers-and-societies.pdf" target='_blank'>Committees, Centers And Societies</Link>
 <Link onClick={closeNav} href="/pdf/donation-with-tax-exemption.pdf" target='_blank'>Donation with Tax Exemption</Link>
@@ -269,7 +299,7 @@ id="basic-nav-dropdown-sub"
 <Link onClick={closeNav} href="/university/infrastructure/sports">Sports</Link>
 </NavDropdown>
 
-<Link onClick={closeNav} href="/pd/NOCForm.pdf"  target='_blank'>N O C Form</Link>
+<Link onClick={closeNav} href="/pdf/NOCForm.pdf"  target='_blank'>N O C Form</Link>
 <Link onClick={closeNav} href="/university/non_teaching_staffs">Non-Teaching Staffs</Link>
     </NavDropdown>
 

@@ -20,8 +20,7 @@ const internship_placement_committee = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -32,23 +31,22 @@ const internship_placement_committee = () => {
     </section>
 
     <section className="container mt_60 mb_60">
-  <div className="pdfs_as_list">
+  <div className="pdfs_as_list text-justify">
     <div className="list_of_pdfs">
     
     <div><p>The University endeavors to develop strong inter-linkages with the industry, law firms, advocates, and regulatory bodies by organizing a six–week internship program for the students at the end of every semester. Internship Programmes are organized to acquaint students with the dynamics of the operation of law in these organizations. The Courses are designed in accordance with the above–stated vision so that the legal scholars and legal engineers that are produced are of great relevance to the contemporary needs of the society. Accordingly, the evaluation system has been evolved which consists of Moot Court Exercise (to hone their advocacy skills), continuous assessment, Research project to provide a strong and enduring knowledge base.</p>
 
 <p>Keeping in mind the widening horizons, the University with the help of the Internship and Placement Committee ensures for arranging proper internship programs&nbsp;for the students. At the beginning of every semester, Internship applications are circulated that are needed to be duly filled and hence submitted before the Public Relations Officer. The Internship Committee, in this regard works towards its best for managing their responsibilities. The Committee mandates for the maintenance of an “Internship Diary” by each and every student of the University to keep a check on the Student and the Employer relationship. The Committee has two wings one dealing with the internships at general and the other wing which deals with the recruitment of the relevant batch i.e. Recruitment Coordination Committee (RCC).</p>
 
-<ul><li>&nbsp; &nbsp; For Recruitment opportunities kindly (click here) or contact us at below mentioned contact details.</li>
-</ul><p>&nbsp;</p>
+<h6 className="mt_15"> For Recruitment opportunities kindly (click here) or contact us at below mentioned contact details.</h6>
 
-<h5 className="mb_15"><strong>Important Contacts</strong></h5>
+<p>Important Contacts</p>
 
-<h5 className="mb_15"><strong>Mr. Shubham Srivastava</strong></h5>
+<p>Mr. Shubham Srivastava</p>
 
-<h5 className="mb_15"><strong>Mob : +91-8580322068</strong></h5>
+<p>Mob : +91-8580322068</p>
 
-<h5 className="mb_15"><strong>E-mail: recruitment@nusrlranchi.ac.in</strong></h5>
+<p>E-mail: recruitment@nusrlranchi.ac.in</p>
 
 <p>&nbsp;</p>
 </div>

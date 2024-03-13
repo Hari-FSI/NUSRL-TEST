@@ -19,8 +19,7 @@ const library_committee = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -33,10 +32,28 @@ const library_committee = () => {
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
     
-    <div className="list_of_pdfs">
-    <p className="mt_30">Dr. Arabinda Sahoo, Assistant Professor, NUSRL, Ranchi</p>
-
-    <p className="mt_30">Mr. Shubham Srivastava, Assistant Professor, NUSRL, Ranchi</p>
+    <div className="list_of_pdfs text-justify">
+    
+    <div class="table-responsive mt_30">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Designation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dr. Arabinda Sahoo</td>
+        <td>Assistant Professor, NUSRL, Ranchi</td>
+      </tr>
+      <tr>
+        <td>Mr. Shubham Srivastava</td>
+        <td>Assistant Professor, NUSRL, Ranchi</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
     </div>
   </div>

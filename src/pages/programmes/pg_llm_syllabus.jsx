@@ -8,7 +8,7 @@ const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmor
 const pg_course_description = () => {
   const herobanner = [
     { id:1, 
-      title: "L.L.M. Syllabus", 
+      title: "Center of post graduate studies", 
       image: "/images/inner-banner.webp"
     }
   ];
@@ -19,8 +19,7 @@ const pg_course_description = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -33,20 +32,19 @@ const pg_course_description = () => {
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
     <div className="list_of_pdf_titles">
-      <h5>Links</h5>
       <p><Link href="/programmes/pg_admission">PG Admission</Link></p>
       <p><Link href="/programmes/pg_course_description">PG Course Description</Link></p>
       <p className="active"><Link href="/programmes/pg_llm_syllabus">L.L.M. Syllabus</Link></p>
       <p><Link href="/pdf/PG-Fee-Statement-2023.pdf" target='_blank'>PG Fee Structure</Link></p>
     </div>
     <div className="list_of_pdfs">
-    <h5>{herobanner[0].title}</h5>
+    <h4>L.L.M. Syllabus</h4>
     <div >
-        <h3>Course Curriculum LLM (One Year)</h3>
+        <h5 className="mt_30 mb_15">Course Curriculum LLM (One Year)</h5>
 
 <div className="table-responsive">
 <table><tbody><tr><th colspan="3">
-			<p>Semester I</p>
+			<p><b>Semester I</b></p>
 			</th>
 		</tr><tr><td><strong>SN</strong></td>
 			<td><strong>Code</strong></td>

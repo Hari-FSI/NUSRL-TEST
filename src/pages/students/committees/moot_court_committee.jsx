@@ -19,8 +19,7 @@ const moot_court_committee = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -33,7 +32,7 @@ const moot_court_committee = () => {
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
     
-    <div className="list_of_pdfs">
+    <div className="list_of_pdfs text-justify">
     <div>
     <p className="text-center">
         <img height="359" src="/images/moot-court-20comittee.jpg" width="612" />

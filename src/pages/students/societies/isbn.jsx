@@ -19,8 +19,7 @@ const isbn = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -33,18 +32,17 @@ const isbn = () => {
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
     
-    <div className="list_of_pdfs">
+    <div className="list_of_pdfs text-justify">
 
-    <div><h3 className="mb_30 text-center">Initiative by Students for Books in NUSRL</h3>
+    <div><h4 className="mb_30 text-center">Initiative by Students for Books in NUSRL</h4>
 
 <p className="text-center"><img src="/images/ISBN-Logo.jpg" /></p>
 
-<p><strong>INTRODUCTION</strong></p>
+<h4 className="mb_15 mt_15">Introduction</h4>
 
 <p>I.S.B.N (Initiative by Students for Books in NUSRL) is a campus-based initiative which aims at providing a parallel pool of educational, recreational and community resources and reading materials to the students of the university. This is a unique opportunity to bring the untapped resources present within the university to optimal utilization. It is a Book Bank run by the students and for the students.</p>
 
-<p><br/><strong>HOW IT WORKS?</strong></p>
-
+<h4 className="mb_15 mt_30">How it works?</h4>
 <ul><li>This is a well-framed process wherein we intend to collect books from the students of the university which they are not currently using.</li>
 	<li>These books will be put up in the ISBN room for other students to issue and use. Issuing a book shall be subject to a nominal charge of Rs 10 per week.</li>
 	<li>For anyone who lends a book to the I.S.B.N. there is an incentive that out of every 10Rs their book earns, he/she/hex shall be entitled to 5Rs, the leftover 5Rs shall be used for functioning of I.S.B.N.</li>
@@ -54,10 +52,9 @@ const isbn = () => {
 	<li>All the financial transactions shall be properly recorded and maintained by the official ‘Treasurer’. These accounts shall be audited by appointed Faculty Auditor.</li>
 	<li>There shall be a weekly operative who will be responsible for the functioning during his\her\hex tenure. The operative will also be entitled for a salary subject to the efficient functioning of I.S.B.N.</li>
 	<li>The operative shall be appointed on first come first serve basis.</li>
-</ul><p>&nbsp;</p>
+</ul>
 
-<p><strong>GENERAL RULES</strong></p>
-
+<h4 className="mb_15 mt_30">General Rules</h4>
 <ol><li>Anyone who uses I.S.B.N. shall identify themselves as a part of the university. Outside students are not permitted to use I.S.B.N. unless there is a special permission [Students shall carry their university identity cards as a proof of their identification]</li>
 	<li>Smoking, eating and drinking is strictly forbidden inside I.S.B.N.</li>
 	<li>Mobile phones or personal stereos should not be used in I.S.B.N.</li>

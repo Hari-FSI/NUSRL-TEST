@@ -6,6 +6,10 @@ import Image from 'next/image'
 const DynamicknowmoreBlock = dynamic(() => import('../../../components/Home/knowmoreBlock'), {
     suspense: true,
   })
+
+  const DynamicuniversityMenu = dynamic(() => import('../../../components/HeaderMain/universityMenu'), {
+    suspense: true,
+  }) 
 const clap = () => {
 
     const herobanner = [
@@ -21,7 +25,6 @@ const clap = () => {
     className="hero inner-banner"
     style={{
     backgroundImage: `url(${herobanner[0].image})`,
-    height: '300px',
     }}
     >
     <div className="container">   
@@ -31,11 +34,23 @@ const clap = () => {
     </div>
     </section>
 
-    <section className="un_messge container">
+    <section className="container">
+    <div className="row">
+    <div className="col-md-3">
+    <Suspense fallback={<div>Loading...</div>}><DynamicuniversityMenu /></Suspense>
+    </div>
+    <div className="col-md-9  mt_30"> 
   <div className="text_block">
-  <h4 className="mb_15">ABOUT Clap</h4>
+  <h4 className="mb_15">ABOUT CLAP</h4>
 <p><a href="/pdf/natak.pdf" target="_blank">CLAP Organized Nukkad Natak on 5th March, 2019</a></p>
-
+<div className="col-md-12 mt_15 mb_15 image height-auto">
+      <Image 
+      src="/images/clap.jpg"
+      alt="Chrss"
+      width={240}
+      height={360}
+      />
+    </div>
 <h4 className="mb_15">Contact Person</h4>
 <p>Dr. K. Syamala, Associate Professor</p>
 
@@ -45,19 +60,8 @@ const clap = () => {
 
 <p>Email: clap@nusrlranchi.ac.in</p>
   </div>
-  <div className="img_block">
-  
-    <div className="image">
-      <Image 
-      src="/images/clap.jpg"
-      alt="Chrss"
-      width={240}
-      height={360}
-      />
-    </div>
-  
   </div>
-  <hr/>
+  </div>
 </section> 
 
 <Suspense fallback={<div>Loading...</div>}><DynamicknowmoreBlock /></Suspense>

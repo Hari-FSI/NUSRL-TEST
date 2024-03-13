@@ -129,6 +129,9 @@ return (
 <input type="email" name="email" className="form-control" placeholder="Email" onChange={handleInputx} value={formData.email} required />
 </div>
 
+
+</div>
+<div className="col-md-6">
 <div className="form-group">
 <PhoneInput
 placeholder="Enter phone number"
@@ -139,12 +142,13 @@ value={value}
 onChange={getPhone}
 />
 </div>
-</div>
-<div className="col-md-6">
+
 <div className="form-group">
 <input type="text" name="subject" className="form-control" placeholder="Subject" onChange={handleInputx} value={formData.company_name} required/>
 </div>
+</div>
 
+<div className="col-md-12">
 <div className="form-group">
 <textarea name="message" className="form-control" placeholder="Message" rows="4" onChange={handleInputx} value={formData.message} required></textarea>
 </div>
@@ -157,12 +161,12 @@ onChange={getPhone}
 
           />}
 </div>
-<div className="form-group text-right">
+<div className="form-group text-center">
 <input id="form_botcheck" name="form_botcheck" className="form-control" type="hidden" value="" />
-<button type="submit" className="btn-border-b" disabled={!isVerified ? true : false}>SUBMIT</button>   
+<button type="submit" className="hvr-bounce-to-right" disabled={!isVerified ? true : false}>SUBMIT</button>   
 
 <div style={divStyles}>
-<button id='submitb' type="button" className="btn-border-b" data-toggle="modal" data-dismiss="modal" data-target="#success-pop">SUBMIT</button>    
+<button id='submitb' type="button" className="hvr-bounce-to-right" data-toggle="modal" data-dismiss="modal" data-target="#success-pop">SUBMIT</button>    
 </div>
 </div>
 </div>

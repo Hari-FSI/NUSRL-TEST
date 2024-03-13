@@ -60,7 +60,9 @@ const LatestNews = () => {
     <OwlCarousel className="latest-news-carousel main-banner owl-carousel owl-theme" {...newsCarousel}>
         {allnews.map((news) => (
         <div className="item" key={news.id}>
+         <img src="/images/new.gif" className={`newtaq ${news.newtaq}`} />
           <p>{news.title}</p>
+          <p class="date"><span class="material-symbols-outlined">calendar_month</span> <span>06-11-2023</span></p>
           <p>
             <Link href={news.link} target={news.target}>
               Read More <span className="material-symbols-outlined"> chevron_right </span>

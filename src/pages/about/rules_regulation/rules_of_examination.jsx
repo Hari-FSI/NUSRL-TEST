@@ -2,9 +2,12 @@ import React,{ useState, useEffect} from "react";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Link from "next/link";
-const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmoreBlock'), {
+const DynamicknowmoreBlock = dynamic(() => import('../../../components/Home/knowmoreBlock'), {
     suspense: true,
   })
+const DynamicaboutMenu = dynamic(() => import('../../../components/HeaderMain/aboutMenu'), {
+    suspense: true,
+}) 
 const rules_of_examination = () => {
 
     const herobanner = [
@@ -20,7 +23,6 @@ const rules_of_examination = () => {
     className="hero inner-banner"
     style={{
     backgroundImage: `url(${herobanner[0].image})`,
-    height: '300px',
     }}
     >
     <div className="container">   
@@ -30,22 +32,29 @@ const rules_of_examination = () => {
     </div>
     </section>
 
-    <section className="container">
-<div className="text_para mt_30">
-  <div className="text_para_section">
+	<section className="container">
+    <div className="row">
+    <div className="col-md-3">
+    <Suspense fallback={<div>Loading...</div>}><DynamicaboutMenu /></Suspense>
+    </div>
+    <div className="col-md-9  pt_30">
+<div className="text_para">
+  <div className="text_para_section pt_30">
     
-<h3>Appendix IV</h3>
+<h4 className="mt_15">Appendix IV</h4>
 <ol className="mt_30">
     <li>Short title and Commencement
-	<ol><li>These rules may be called as Rules of Examination and Evaluation, 2010.</li>
-	</ol></li>
+	<ul>
+		<li>These rules may be called as Rules of Examination and Evaluation, 2010.</li>
+	</ul>
+	</li>
 	<li>Controller of Examination
-	<ol><li>There shall be a Controller of Examination as per The National University of Study and Research in Law, Ranchi 2010 (Act 4 of 2010, Jharkhand).</li>
+	<ul><li>There shall be a Controller of Examination as per The National University of Study and Research in Law, Ranchi 2010 (Act 4 of 2010, Jharkhand).</li>
 		<li>The Vice-Chancellor shall appoint the Controller of Examination from time to time.</li>
 		<li>The Controller of Examination shall be responsible for holding of all Examinations to be conducted by the University.</li>
 		<li>He shall be custodian of entire examination records.</li>
 		<li>He shall be responsible for preparation and dispatch of Grade Cards. However, the Registrar shall sign notification of results.</li>
-	</ol></li>
+	</ul></li>
 	<li>Examination Committee
 	<p>There shall be a standing committee comprising of Controller of Examination as Chairman and such other members as may be appointed by the Vice-chancellor from time to time to assist and advice Controller of Examination and further perform such other functions as may be assigned by the Vice-Chancellor from time to time.</p>
 	</li>
@@ -55,7 +64,7 @@ const rules_of_examination = () => {
 	<li>Grades and Grade Point
 	<p>The marks secured by the students in individual courses shall be converted into Grades and Grade Points as per the following table.</p>
 
-	<div className="table-responsive">
+	<div className="table-responsive mt_15">
 	<table><tbody><tr><th>SN</th>
 				<th>SCORE</th>
 				<th>GRADE</th>
@@ -132,6 +141,8 @@ const rules_of_examination = () => {
 	</li>
 </ol>
   </div>
+</div>
+</div>
 </div>
 </section>
 

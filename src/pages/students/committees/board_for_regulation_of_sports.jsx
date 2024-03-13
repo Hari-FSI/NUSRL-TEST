@@ -19,8 +19,7 @@ const board_for_regulation_of_sports = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -33,7 +32,7 @@ const board_for_regulation_of_sports = () => {
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
     
-    <div className="list_of_pdfs">
+    <div className="list_of_pdfs text-justify">
     <div>
     <p className="text-center">
         <img height="359" src="/images/board-for-regulation-of-sports.png" width="612" />
@@ -55,7 +54,7 @@ const board_for_regulation_of_sports = () => {
 
 </span></span></p>
 
-<strong>Contact Person:</strong><br/><span><span >
+<h4 className="mt_15 mb_15">Contact Person:</h4><span><span >
 </span></span><span><span >Dr. Gunjan, Assistant Professor, NUSRL, Ranchi</span></span><br/>
 <span ><span ><span>Ms. Surbhi Singh, , Teaching Assistant, NUSRL, Ranchi</span></span></span><br/>
 

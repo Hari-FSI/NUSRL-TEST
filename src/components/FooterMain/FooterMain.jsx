@@ -105,8 +105,8 @@ const FooterMain = () => {
       <div className="col_1">
         <h3 className="mb_15">About</h3>
         <ul className="ullist">
-		     <li><Link className="link" href="/students/internship_placement_committee">Internship & Placement Committee</Link></li>
-         <li><Link className="link" href="/students/recruitment_brochure">Recruitment Brochure</Link></li>
+		     <li><Link className="link" href="/students/internshipplacement/internship_placement_committee">Internship & Placement Committee</Link></li>
+         <li><Link className="link" href="/students/internshipplacement/recruitment_brochure">Recruitment Brochure</Link></li>
           <li><Link className="link" href="/about/rti">Right to Information (RTI)</Link></li>
           <li><Link className="link" href="/students/statutorycommittees/anti_ragging_cell">Anti Ragging Cell</Link></li>
           <li><Link className="link" href="/students/statutorycommittees/internal_complaints_committee_icc">Internal Complaints Committee (ICC)</Link></li>

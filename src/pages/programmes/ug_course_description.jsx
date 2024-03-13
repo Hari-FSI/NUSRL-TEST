@@ -8,7 +8,7 @@ const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmor
 const ug_course_description = () => {
   const herobanner = [
     { id:1, 
-      title: "Course Description", 
+      title: "Under Graduate Programmes", 
       image: "/images/inner-banner.webp"
     }
   ];
@@ -33,8 +33,7 @@ const ug_course_description = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -45,17 +44,16 @@ const ug_course_description = () => {
     </section>
 
     <section className="container mt_60 mb_60">
-  <div className="pdfs_as_list">
+  <div className="pdfs_as_list ">
     <div className="list_of_pdf_titles">
-      <h5>Links</h5>
       <p><Link href="/programmes/ug_admission">Under Graduate</Link></p>
       <p className="active"><Link href="/programmes/ug_course_description">Course Description</Link></p>
       <p><Link href="/programmes/ug_syllabus">Syllabus</Link></p>
       <p><Link href="/programmes/ug_subject_list">Subject List</Link></p>
       <p><Link href="/pdf/UG-Fee-Statement-2023.pdf" target='_blank'>Fee Structure</Link></p>
     </div>
-    <div className="list_of_pdfs">
-    <h5>{herobanner[0].title}</h5>
+    <div className="list_of_pdfs text-justify">
+    <h4>Course Description</h4>
     {cardData.map((card, index) => (
   <div key={card.id}>
     {card.info.map((paragraph, paragraphIndex) => (

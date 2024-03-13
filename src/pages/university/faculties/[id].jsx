@@ -1,7 +1,7 @@
 import React,{ useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import Image from 'next/image'
+import Image from 'next/image';
 import jsonData from '../../../pages/api/faculties.json';
 
 const details = ({ faculty  }) => {
@@ -17,7 +17,6 @@ const details = ({ faculty  }) => {
     className="hero inner-banner"
     style={{
     backgroundImage: `url(${herobanner[0].image})`,
-    height: '300px',
     }}
     >
     <div className="container">   
@@ -26,79 +25,114 @@ const details = ({ faculty  }) => {
     </div>
     </div>
     </section>
-    
+      
+      <section className="breadcrumb">
+       <div className="container"> 
+      <div className="row">  
+      <div className="col-md-8 col-sm-8 col-xs-8">
+      <ul>
+      <li><Link href="/">Home</Link></li>
+      <li><Link href="/university/faculties">Faculties</Link></li>
+      <li>{faculty.name}</li>
+      </ul>
+      </div>
+      <div className="col-md-4 col-sm-4 col-xs-4 text-right">
+      <a className="btn-blue-brd" href="/university/faculties"> <span className="material-symbols-outlined">chevron_left </span> Back</a>
+      </div>
+      </div>
+      </div>
+      </section>
+      
     <section className="facultydetails container">
 
-<div className="col-md-9 col-sm-9">
-  <div className="vertical-tabs">
-    <ul className="nav nav-pills nav-stacked pull-left">
-      <li className="active"><a data-toggle="pill" href="#pill21">About</a></li>
-      
-      <li><a data-toggle="pill" href="#pill22">Qualifications</a></li>
-      <li><a data-toggle="pill" href="#pill23">Publications</a></li>
-      <li><a data-toggle="pill" href="#pill24">Conferences</a></li>
-      <li><a data-toggle="pill" href="#pill26">Contact</a></li>
-    </ul>
+     <div className="profile-header">
+      <div className="row">
+      <div className="col-md-3">
+      <Image 
+      src={faculty.image}
+      alt={faculty.name}
+      width={240}
+      height={360}
+      />
+      </div>
+      <div className="col-md-9">
+      <h3 className="mb_15">{faculty.name}</h3>
+      <p className="position mb_15">{faculty.designation}</p>
+      <h6 className="bborder"><span className="material-symbols-outlined">call</span> Phone Number : <span className="txt">{faculty.phone}</span></h6>
+      <h6 className="bborder mb_15"><span className="material-symbols-outlined">drafts</span> Email Id : <span className="txt">{faculty.email}</span></h6>
+      </div>
+      </div>
 
-    <div className="tab-content txt-justify">
-      
-      <div id="pill21" className="tab-pane fade in active">						 
-          <h4>About {faculty.name}</h4>
-          <div className="mt_30">
-            {faculty.about.map((paragraph, index) => (
-            <p key={index} className="mt_30" dangerouslySetInnerHTML={{ __html: paragraph }} />
-            ))}
-          </div>
-      </div>
-      <div id="pill22" className="tab-pane fade">						  
-         <h2>Qualifications</h2>
-         {faculty.qualifications.map((paragraph, index) => (
-            <p key={index} className="mt_30" dangerouslySetInnerHTML={{ __html: paragraph }} />
-            ))}
-      </div>
-      <div id="pill23" className="tab-pane fade">				  
-         <h2>Publications</h2>
-         {faculty.publications.map((paragraph, index) => (
-            <p key={index} className="mt_30" dangerouslySetInnerHTML={{ __html: paragraph }} />
-            ))}
-      </div>
-      <div id="pill24" className="tab-pane fade">				  
-         <h2>Conferences</h2>
-         {faculty.conferences.map((paragraph, index) => (
-            <p key={index} className="mt_30" dangerouslySetInnerHTML={{ __html: paragraph }} />
-            ))}
-      </div>
-      <div id="pill25" className="tab-pane fade">				  
-         <h2>Courses</h2>
-         {faculty.courses.map((paragraph, index) => (
-            <p key={index} className="mt_30" dangerouslySetInnerHTML={{ __html: paragraph }} />
-            ))}
-      </div>
-      <div id="pill26" className="tab-pane fade">
-      <h2>Contact Details</h2>
-      {faculty.contact.map((paragraph, index) => (
-            <p key={index} className="mt_30" dangerouslySetInnerHTML={{ __html: paragraph }} />
-            ))} 
-      </div>
-    </div>
- </div>                  
-</div>
+     </div>
 
-<div className="col-md-3 col-sm-3 right-side">
-<Image 
-src={faculty.image}
-alt={faculty.name}
-width={240}
-height={360}
-/>
-  <h5 className="mt_60">{faculty.name}</h5>
-  <p className="position">{faculty.designation}</p>
-  <h6 className="bborder">Phone</h6>
-  <p>{faculty.phone}</p>
 
-  <h6 className="bborder">Email</h6>
-  <p>{faculty.email}</p>
-</div>
+<ul className="nav nav-tabs" role="tablist" id="myTab">
+  <li className="active">
+    <Link href="#facultytab-1" role="tab" data-toggle="tab">
+    <span className="material-symbols-outlined">account_box</span> About
+    </Link>
+  </li>
+  <li>
+    <Link href="#facultytab-2" role="tab" data-toggle="tab">
+    <span className="material-symbols-outlined">school</span> Qualifications
+    </Link>
+  </li>
+  <li>
+    <Link href="#facultytab-3" role="tab" data-toggle="tab">
+    <span className="material-symbols-outlined">book_5</span> Publications
+    </Link>
+  </li>
+  <li>
+    <Link href="#facultytab-4" role="tab" data-toggle="tab">
+    <span class="material-symbols-outlined">diversity_2</span> Conferences
+    </Link>
+  </li>
+</ul>
+
+<div className="tab-content txt-justify">
+  <div className="tab-pane active" id="facultytab-1">
+  <h4>About {faculty.name}</h4>
+  <div className="mt_30">
+  {faculty.about.map((paragraph, index) => (
+  <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
+  ))}
+  </div>
+  </div>
+  <div className="tab-pane fade" id="facultytab-2">
+  <h4>Qualifications</h4>
+  <div className="mt_30">
+  {faculty.qualifications.map((paragraph, index) => (
+  <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
+  ))}
+  </div>
+  </div>
+
+  <div className="tab-pane fade" id="facultytab-3">
+  <h4>Publications</h4>
+  <div className="mt_30">
+  {faculty.publications.map((paragraph, index) => (
+  <p key={index} className="mt_30" dangerouslySetInnerHTML={{ __html: paragraph }} />
+  ))}
+  </div>
+  </div>
+
+  <div className="tab-pane fade" id="facultytab-4">
+  <h4>Conferences</h4>
+  <div className="mt_30">
+  {faculty.conferences.map((paragraph, index) => (
+  <p key={index} className="mt_30" dangerouslySetInnerHTML={{ __html: paragraph }} />
+  ))}
+  </div>
+  </div>
+
+</div>  
+
+
+
+
+    
+     
+
 
 </section>
     </>

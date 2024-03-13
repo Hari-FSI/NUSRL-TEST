@@ -2,9 +2,14 @@ import React,{ useState, useEffect} from "react";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Link from "next/link";
-const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmoreBlock'), {
+const DynamicknowmoreBlock = dynamic(() => import('../../../components/Home/knowmoreBlock'), {
     suspense: true,
   })
+
+  
+  const DynamicaboutMenu = dynamic(() => import('../../../components/HeaderMain/aboutMenu'), {
+    suspense: true,
+}) 
 const internal_management_structure = () => {
 
     const herobanner = [
@@ -20,7 +25,6 @@ const internal_management_structure = () => {
     className="hero inner-banner"
     style={{
     backgroundImage: `url(${herobanner[0].image})`,
-    height: '300px',
     }}
     >
     <div className="container">   
@@ -31,10 +35,17 @@ const internal_management_structure = () => {
     </section>
 
     <section className="container">
+    <div className="row">
+    <div className="col-md-3">
+    <Suspense fallback={<div>Loading...</div>}><DynamicaboutMenu /></Suspense>
+    </div>
+    <div className="col-md-9  pt_30">
 <div className="text_para mt_30">
   <div className="text_para_section">
-  <h3 className="text-center">Content not available</h3>
+  <h4 className="text-center mt_30 mb_30">Content not available</h4>
   </div>
+</div>
+</div>
 </div>
 </section>
 

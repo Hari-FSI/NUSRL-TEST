@@ -7,12 +7,12 @@ const knowmoreBlock = () => {
 <hr/>
 <section className="container-fluid know_more">
   <div className="container know_more_blocks">
-    <div className="text_block">
+    <div className="text_block wow animate__fadeInUp" data-wow-duration="3s">
       <h3>Want to know more?</h3>
       <p>Please get in touch to find out how we can help you.</p>
     </div>
     <div className="more_blocks">
-      <div className="more_block">
+      <div className="more_block wow animate__fadeInUp" data-wow-duration="1s">
         <div>
             <Image src='/images/icons/icon-11.gif' 
             alt="Picture of the author"
@@ -26,7 +26,7 @@ const knowmoreBlock = () => {
           </div>
           <Link href="/visit_NUSRL" className="btn-white-brd">Learn more</Link>
       </div>
-      <div className="more_block">
+      <div className="more_block wow animate__fadeInUp" data-wow-duration="2s">
         <div>
         <Image src='/images/icons/icon-12.gif' 
         alt="Picture of the author"

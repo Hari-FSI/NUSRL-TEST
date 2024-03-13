@@ -53,8 +53,7 @@ const examinations = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -72,7 +71,7 @@ const examinations = () => {
      
     {batchs.map((batch) => (
   <div key={batch.id}>
-     <h5>{batch.name}</h5>
+     <h4>{batch.name}</h4>
     <div className="cards mb_30">
       {batch.link.map((linkItem) => (
         <div className="card programee-card" key={linkItem.id}>

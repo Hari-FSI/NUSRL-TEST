@@ -42,8 +42,7 @@ const examinations_schedule = () => {
       <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -54,7 +53,7 @@ const examinations_schedule = () => {
     </section>
 
     <section className="container mt_60 mb_60">
-    <h5>{herobanner[0].title}</h5>
+    {/*<h5>{herobanner[0].title}</h5>*/}
       <div className="cards">
       {cardData.map((card) => (
         <div className="card" key={card.id}>

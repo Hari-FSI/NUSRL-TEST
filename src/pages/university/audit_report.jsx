@@ -5,6 +5,9 @@ import Link from "next/link";
 const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmoreBlock'), {
   suspense: true,
 })
+const DynamicuniversityMenu = dynamic(() => import('../../components/HeaderMain/universityMenu'), {
+  suspense: true,
+}) 
 const audit_report = () => {
   const herobanner = [
     { id:1, 
@@ -42,8 +45,7 @@ const audit_report = () => {
       <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -53,8 +55,12 @@ const audit_report = () => {
     </div>
     </section>
 
-    <section className="container mt_60 mb_60">
-    <h5>{herobanner[0].title}</h5>
+    <section className="container">
+    <div className="row">
+    <div className="col-md-3">
+    <Suspense fallback={<div>Loading...</div>}><DynamicuniversityMenu /></Suspense>
+    </div>
+    <div className="col-md-9  pt_30"> 
       <div className="cards">
       {cardData.map((card) => (
         <div className="card" key={card.id}>
@@ -72,6 +78,8 @@ const audit_report = () => {
         </div>
       ))}
       </div>
+      </div>
+        </div>
     </section>
     <Suspense fallback={<div>Loading...</div>}><DynamicknowmoreBlock /></Suspense>
     </>

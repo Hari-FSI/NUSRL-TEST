@@ -6,6 +6,10 @@ import Link from "next/link";
 const DynamicknowmoreBlock = dynamic(() => import('../../../components/Home/knowmoreBlock'), {
     suspense: true,
   })
+
+  const DynamicaboutMenu = dynamic(() => import('../../../components/HeaderMain/aboutMenu'), {
+    suspense: true,
+  }) 
 import jsonData from '../../../pages/api/keypersonnel.json';
 const Chancellor = () => {
     const herobanner = [
@@ -22,7 +26,6 @@ const Chancellor = () => {
     className="hero inner-banner"
     style={{
     backgroundImage: `url(${herobanner[0].image})`,
-    height: '300px',
     }}
     >
     <div className="container">   
@@ -31,26 +34,31 @@ const Chancellor = () => {
     </div>
     </div>
     </section>
-    <section className="un_messge container">
-  <div className="text_block">
-    <h3>{chancellor.title}</h3>
+    <section className="container">
+    <div className="row">
+    <div className="col-md-3">
+    <Suspense fallback={<div>Loading...</div>}><DynamicaboutMenu /></Suspense>
+    </div>
+    <div className="col-md-9 un_messge  pt_30">
+    <div className="text_block pt_15">
     <h4>{chancellor.name}</h4>
+    <p><b>{chancellor.title}</b></p>
     <p>{chancellor.designation}</p>
   </div>
   <div className="img_block">
-  
-    <div className="image">
+  <div className="image image_in ">
       <Image 
       src={chancellor.image}
       alt={chancellor.title}
       width={240}
       height={360}
       />
-    </div>
+  </div>
   
   </div>
-  <hr/>
-</section> 
+    </div>
+    </div>
+    </section> 
 <Suspense fallback={<div>Loading...</div>}><DynamicknowmoreBlock /></Suspense>
     </>
   )

@@ -8,7 +8,7 @@ const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmor
 const ug_syllabus = () => {
   const herobanner = [
     { id:1, 
-      title: "Syllabus", 
+      title: "Under Graduate Programmes", 
       image: "/images/inner-banner.webp"
     }
   ];
@@ -18,8 +18,7 @@ const ug_syllabus = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -32,7 +31,6 @@ const ug_syllabus = () => {
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
     <div className="list_of_pdf_titles">
-      <h5>Links</h5>
       <p><Link href="/programmes/ug_admission">Under Graduate</Link></p>
       <p><Link href="/programmes/ug_course_description">Course Description</Link></p>
       <p  className="active"><Link href="/programmes/ug_syllabus">Syllabus</Link></p>
@@ -40,7 +38,7 @@ const ug_syllabus = () => {
       <p><Link href="/pdf/UG-Fee-Statement-2023.pdf" target='_blank'>Fee Structure</Link></p>
     </div>
     <div className="list_of_pdfs">
-    <h5>{herobanner[0].title}</h5>
+    <h4>Syllabus</h4>
     <div className="node__content clearfix details-page-content" tabindex="0">
     
     <div property="schema:text" className="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">

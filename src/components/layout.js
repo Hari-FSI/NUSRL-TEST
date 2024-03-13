@@ -10,7 +10,10 @@ const DynamicFooterMain = dynamic(() => import('./FooterMain/FooterMain'), {
   suspense: true,
 })
 
+
+
 export default function Layout({ children }) {
+  
   return (
     <>
       <div className="conatiner-box">

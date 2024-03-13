@@ -40,6 +40,7 @@ const DynamicLatestevents = dynamic(() => import('../components/Home/Latestevent
   suspense: true,
 })
 
+
 const DynamicknowmoreBlock = dynamic(() => import('../components/Home/knowmoreBlock'), {
   suspense: true,
 })
@@ -48,13 +49,25 @@ const DynamicPartners = dynamic(() => import('../components/Home/Partners'), {
   suspense: true,
 })
 
+
+
+
 export default function pages() {
   const isServer = typeof window === 'undefined'
   const [results, setResults] = useState()
+
+  const WOW = !isServer ? require('wowjs') : null
+  useEffect(()=>{
+    
+      new WOW.WOW({
+        live: true
+    }).init();
+    
+      
+    },[])
+
 return (
 <main>
-
-
 <Suspense fallback={<div>Loading...</div>}><DynamicBannersection /></Suspense>
 <Suspense fallback={<div>Loading...</div>}><DynamicNotificationsection /></Suspense>
 <Suspense fallback={<div>Loading...</div>}><DynamicAboutsection/></Suspense>
@@ -67,8 +80,6 @@ return (
 <Suspense fallback={<div>Loading...</div>}><DynamicLatestevents/></Suspense>
 <Suspense fallback={<div>Loading...</div>}><DynamicknowmoreBlock /></Suspense>
 <Suspense fallback={<div>Loading...</div>}><DynamicPartners/></Suspense>
-
-
 </main>
 
   )

@@ -19,8 +19,7 @@ const nusrl_ranchi_wins_the_7th_wipro_earthian_award = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   

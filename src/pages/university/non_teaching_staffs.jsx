@@ -1,14 +1,22 @@
-import React,{ useState, useEffect, useRef } from "react";
+import React,{ useState, useEffect} from "react";
 import dynamic from "next/dynamic";
+import { Suspense } from "react";
 import Link from "next/link";
-import Image from 'next/image'
+import Image from 'next/image';
 import jsonData from '../api/NonTeachingStaffs.json';
+
+const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmoreBlock'), {
+  suspense: true,
+})
+const DynamicuniversityMenu = dynamic(() => import('../../components/HeaderMain/universityMenu'), {
+  suspense: true,
+})  
 
 const non_teaching_staffs = () => {
 
     const herobanner = [
         { id:1, 
-          title:"1.	Non-Teaching Staffs",  
+          title:"Non-Teaching Staffs",  
           image: "/images/inner-banner.webp"
         }
       ];
@@ -23,7 +31,6 @@ const non_teaching_staffs = () => {
     className="hero inner-banner"
     style={{
     backgroundImage: `url(${herobanner[0].image})`,
-    height: '300px',
     }}
     >
     <div className="container">   
@@ -32,22 +39,36 @@ const non_teaching_staffs = () => {
     </div>
     </div>
     </section>
-    
-    <section className="facultydetails container">
 
-<div className="col-md-12 col-sm-12">
-  <div className="vertical-tabs">
-    <ul className="nav nav-pills nav-stacked pull-left">
-      <li className="active"><a data-toggle="pill" href="#pill21">IT Staffs</a></li>      
-      <li><a data-toggle="pill" href="#pill22">Library Staffs</a></li>
-      <li><a data-toggle="pill" href="#pill23">Administrative Staffs</a></li>
-    </ul>
+    <section className="container">
+    <div className="row">
+    <div className="col-md-3">
+    <Suspense fallback={<div>Loading...</div>}><DynamicuniversityMenu /></Suspense>
+    </div>
+    <div className="col-md-9  pt_30 facultydetails"> 
 
-    <div className="tab-content txt-justify">
-      
-      <div id="pill21" className="tab-pane fade in active">						 
-          <h4>IT Staffs</h4>
-         <div className="faculties"> 
+    <ul className="nav nav-tabs" role="tablist" id="myTab">
+  <li className="active">
+    <Link href="#nonteachingtab-1" role="tab" data-toggle="tab">
+    <span className="material-symbols-outlined">account_box</span> IT Staffs
+    </Link>
+  </li>
+  <li>
+    <Link href="#nonteachingtab-2" role="tab" data-toggle="tab">
+    <span className="material-symbols-outlined">book_5</span> Library Staffs
+    </Link>
+  </li>
+  <li>
+    <Link href="#nonteachingtab-3" role="tab" data-toggle="tab">
+    <span className="material-symbols-outlined">apartment</span> Administrative Staffs
+    </Link>
+  </li>
+</ul>
+
+<div className="tab-content txt-justify">
+  <div className="tab-pane active" id="nonteachingtab-1">
+  <h4>IT Staffs</h4>
+  <div className="faculties"> 
           {it.map((it) => (
         <div className="faculty" key={it.id}>
         <Image 
@@ -57,19 +78,19 @@ const non_teaching_staffs = () => {
         height={360}
         />
         <div className="faculity_details">
-        <h5>{it.name}</h5>
-        <p>{it.designation}</p>
+        <h6>{it.name}</h6>
+        <p className="desi">{it.designation}</p>
         </div>
         </div>
         ))}
         </div>
-      </div>
-      <div id="pill22" className="tab-pane fade">						  
-         <h4>Library Staffs</h4>
-         <p>No data</p>
-      </div>
-      <div id="pill23" className="tab-pane fade">				  
-         <h4>Administrative Staffs</h4>
+  </div>
+  <div className="tab-pane fade" id="nonteachingtab-2">
+  <h4>Library Staffs</h4>
+  <p>No data</p>
+  </div>
+  <div className="tab-pane fade" id="nonteachingtab-3">
+  <h4>Administrative Staffs</h4>
          <div className="faculties"> 
          {administrative.map((administrative) => (
         <div className="faculty" key={administrative.id}>
@@ -80,19 +101,20 @@ const non_teaching_staffs = () => {
         height={360}
         />
         <div className="faculity_details">
-        <h5>{administrative.name}</h5>
-        <p>{administrative.designation}</p>
+        <h6>{administrative.name}</h6>
+        <p className="desi">{administrative.designation}</p>
         </div>
         </div>
         ))}
          </div>
-      </div>
-     
-    </div>
- </div>                  
+  </div>
 </div>
 
-</section>
+    </div>
+    </div>
+    </section>
+    
+    <Suspense fallback={<div>Loading...</div>}><DynamicknowmoreBlock /></Suspense>
     </>
   )
 }

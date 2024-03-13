@@ -8,7 +8,7 @@ const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmor
 const ug_subject_list = () => {
   const herobanner = [
     { id:1, 
-      title: "Subject List", 
+      title: "Under Graduate Programmes", 
       image: "/images/inner-banner.webp"
     }
   ];
@@ -60,8 +60,7 @@ const ug_subject_list = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -74,7 +73,6 @@ const ug_subject_list = () => {
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
     <div className="list_of_pdf_titles">
-      <h5>Links</h5>
       <p ><Link href="/programmes/ug_admission">Under Graduate</Link></p>
       <p><Link href="/programmes/ug_course_description">Course Description</Link></p>
       <p><Link href="/programmes/ug_syllabus">Syllabus</Link></p>
@@ -83,10 +81,11 @@ const ug_subject_list = () => {
     </div>
     <div className="list_of_pdfs " >
     
-     
+    <h4 className="mb_15">Subject List</h4> 
     {batchs.map((batch) => (
   <div key={batch.id}>
-     <h5>{batch.name}</h5>
+
+     <h6 className="mb_15">{batch.name}</h6>
     <div className="cards mb_30">
       {batch.link.map((linkItem) => (
         <div className="card programee-card" key={linkItem.id}>

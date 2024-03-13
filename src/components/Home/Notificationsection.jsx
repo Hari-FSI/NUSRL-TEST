@@ -22,17 +22,17 @@ const Notificationsection = (lnews ) => {
    <>
    <section className="notification">
     <div className="block"></div>
-    <div className="block">
+    <div className="block wow animate__fadeInUp" data-wow-duration="3s">
       <h4>Visit NUSRL</h4>
-      <p>Campus tour: modern classNamerooms, vibrant spaces.</p>
+      <p>Campus: modern classrooms, vibrant spaces.</p>
       <p><Link href="/visit_NUSRL">Read More <span className="material-symbols-outlined"> chevron_right </span></Link></p>
     </div>
-    <div className="block">
+    <div className="block wow animate__fadeInUp" data-wow-duration="3s">
       <h4>Infrastructure</h4>
       <p>Innovative infrastructure for inspired learning.</p>
       <p><Link href="/infrastructure">Read More <span className="material-symbols-outlined"> chevron_right </span></Link></p>
     </div>
-    <div className="latestnews-owl-sec">
+    <div className="latestnews-owl-sec wow animate__fadeInUp" data-wow-duration="3s">
       <h4>Latest NEWS</h4>
       <Suspense fallback={<div>Loading...</div>}><DynamicLatestNews /></Suspense>
     </div>

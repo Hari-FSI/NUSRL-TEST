@@ -4,8 +4,8 @@ import Image from 'next/image'
 const Gallery = () => {
   return (
     <>
-<section className="gallery container-fluid">
-  <div className="column_1" style={{
+<section className="gallery container-fluid ">
+  <div className="column_1 wow animate__slideInLeft" data-wow-duration="2s" style={{
     backgroundImage:`url(/images/gallery/gallery-2.webp)`,
     }}
     >
@@ -15,7 +15,7 @@ const Gallery = () => {
       <p><Link href="/gallery">Read More <span className="material-symbols-outlined"> chevron_right </span></Link></p>
     </div>
   </div>
-  <div className="column_2">
+  <div className="column_2 wow animate__fadeIn" data-wow-duration="3s">
     <div className="image" 
     style={{
         backgroundImage:`url(/images/gallery/gallery-4.webp)`,
@@ -27,10 +27,10 @@ const Gallery = () => {
       <p><Link href="/students/scholarship">Read More <span className="material-symbols-outlined"> chevron_right </span></Link></p>
     </div>
   </div>
-  <div className="column_3">
+  <div className="column_3 wow animate__slideInRight" data-wow-duration="2s">
     <div className="block bg_green">
-      <h4 className="title">Facilities</h4>
-      <h6>Discover cutting-edge facilities, fostering innovation at every corner of our university.</h6>
+      <h4 className="title">Faculties</h4>
+      <h6>Faculties are skilled educators who guide students, shape curricula, and contribute to academic excellence in specific subjects.</h6>
       <p><Link href="/university/faculties">Read More <span className="material-symbols-outlined"> chevron_right </span></Link></p>
     </div>
     <div className="image"

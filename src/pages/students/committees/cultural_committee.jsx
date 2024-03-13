@@ -19,8 +19,7 @@ const cultural_committee = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -33,7 +32,7 @@ const cultural_committee = () => {
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
     
-    <div className="list_of_pdfs">
+    <div className="list_of_pdfs text-justify">
     <div>
     <p className="text-center">
         <img height="359" src="/images/cultural.jpg" width="612" />
@@ -43,7 +42,7 @@ const cultural_committee = () => {
 
 </span></span></p>
 <br/>
-<strong>Contact Person:</strong><br/><span><span >
+<h4 className="mb_15">Contact Person:</h4><span><span >
 </span></span><span><span >Dr. Sangita Laha, Associate Professor, NUSRL, Ranchi </span></span><br/>
 <span ><span ><span>Mr. Anubhav Kumar, Assistant Professor, NUSRL, Ranchi</span></span></span><br/>
 <span ><span ><span>Ms. Sreemoyee Sarkar, Teaching Assistant, NUSRL, Ranchi</span></span></span><br/>

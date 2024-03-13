@@ -8,7 +8,7 @@ const DynamicknowmoreBlock = dynamic(() => import('../../components/Home/knowmor
 const phd_admission = () => {
   const herobanner = [
     { id:1, 
-      title: "Ph.D Course Description", 
+      title: "Doctor of Philosophy (Ph.D)", 
       image: "/images/inner-banner.webp"
     }
   ];
@@ -19,8 +19,7 @@ const phd_admission = () => {
     <section
         className="hero inner-banner"
         style={{
-          backgroundImage: `url(${herobanner[0].image})`,
-          height: '300px',
+          backgroundImage: `url(${herobanner[0].image})`
         }}
       >
      <div className="container">   
@@ -33,7 +32,6 @@ const phd_admission = () => {
     <section className="container mt_60 mb_60">
   <div className="pdfs_as_list">
     <div className="list_of_pdf_titles">
-      <h5>Links</h5>
       <p><Link href="/programmes/phd_admission">Ph.D Admission</Link></p>
       <p className="active"><Link href="/programmes/phd_course_description">Ph.D Course Description</Link></p>
       <p><Link href="/pdf/PhDFullTime-Fee Structure.pdf" target='_blank'>Fee Structure of Ph.D. (Full Time)</Link></p>
@@ -41,7 +39,7 @@ const phd_admission = () => {
       <p><Link href="/pdf/Fees-structure-of-PhD-Thesis submission.pdf" target='_blank'>Fees structure of Ph. D. Thesis submission </Link></p>
     </div>
     <div className="list_of_pdfs">
-    <h5 className="mb_15">{herobanner[0].title}</h5>
+    <h4 className="mb_15">Ph.D Course Description</h4>
     <div className="table-responsive">
 <table role="presentation"><tbody><tr><td colspan="3"><strong>Ph.D Course Work (Semester I)</strong></td>
 		</tr><tr><td><strong>SN</strong></td>
